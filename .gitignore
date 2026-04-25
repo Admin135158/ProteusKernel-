@@ -1,0 +1,106 @@
+# ============================================================
+# PROTEUS KERNEL — MASTER .gitignore
+# ============================================================
+
+# === BUILD ARTIFACTS (ALL PLATFORMS) ===
+*.o
+*.so
+*.a
+*.out
+*.exe
+*.dll
+*.dylib
+PROTEUS_ENGINE
+proteus
+proteus_final
+proteus_kernel
+proteus_master
+proteus_v5_1
+proteus_v5_fixed
+proteus_agent
+proteus_complete
+proteus_kernel.v4.backup
+zayden_bridge
+zayden_ultimate
+zayden_ai
+zayden_fixed
+zayden_simple
+zayden_trained
+zayden_unified
+zayden_v2
+heartbeat
+heartbeat_v2
+shard_dna
+swarm_status
+dna_encode
+ZaydenApp
+genesis
+morpheus-web
+bin/*
+!bin/.gitkeep
+
+# === RUNTIME STATE ===
+*.pid
+*.lock
+*.tmp
+*.bak
+*.old
+active.txt
+active_peers.txt
+peers.txt
+proteus_state.txt
+zayden_memory.txt
+*.dna.tmp
+
+# === LOGS (keep structure, ignore content) ===
+logs/*
+!logs/.gitkeep
+
+# === DNA BACKUPS (keep structure, ignore bulk) ===
+dna/backups/*
+!dna/backups/.gitkeep
+dna/vault/*
+!dna/vault/.gitkeep
+
+# === STORAGE / DATA ===
+storage/*
+!storage/.gitkeep
+data/*
+!data/.gitkeep
+downloads/*
+
+# === PYTHON CACHE ===
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+venv/
+env/
+.env/
+
+# === IDE / OS ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# === ARCHIVES (already stored in archive/) ===
+*.tar.gz
+*.zip
+*.aab
+*.rar
+*.7z
+
+# === KEYS (if any slip through) ===
+*.pem
+*.key
+id_*
+!config/ssh/.gitkeep
+
+# === NODE / WEB ===
+node_modules/
+*.log
+npm-debug.log*

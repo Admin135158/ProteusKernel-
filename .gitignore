@@ -1,0 +1,42 @@
+# Build artifacts
+*.o
+*.out
+*.exe
+*.bin
+build/
+proteus_child_*
+proteus_fixed
+proteus_final
+proteus_master
+proteus_kernel
+proteus_kernel_bin
+proteus_kernel_complete
+heartbeat
+heartbeat_broadcast
+heartbeat_decoded
+heartbeat_multicast
+heartbeat_replicant
+heartbeat_secure
+mutated
+swarm
+swarm_push
+zayden_gorf
+zayden_ultimate
+agent
+gatekeeper
+remote_control
+supervisor
+cpp_push
+shard.dna
+node_secret.bin
+
+# Logs
+*.log
+
+# DNA/state files (generated at runtime)
+*.dna
+*.state
+
+# Termux/Downloads
+downloads/
+storage/

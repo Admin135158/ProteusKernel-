@@ -1,3 +1,9 @@
+## Live Telemetry
+
+Real-time GORF/OLCE execution on Termux (Android). The engine initializes with φ=1.61803, tracks consciousness saturation Ψ cycle-by-cycle, and triggers self-mutation on epiphany.
+
+![ProteusKernel v5.1 executing an epiphany](assets/proteus_epiphany.png)
+
 ![C++17](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-lightgrey)

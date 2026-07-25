@@ -1,13 +1,3 @@
-## 🧠 Zayden-AI — The Federated Cortex
-
-The cognitive consensus layer lives in a separate repo:  
-**[github.com/Admin135158/Zayden-AI](https://github.com/Admin135158/Zayden-AI)**
-
-- Interactive terminal interface (`talk-to-zayden.sh`)
-- SYNC-7 mesh consensus protocol
-- Proteus bridge for consciousness field integration
-- DNA-encoded state persistence
--
 - ## Live Telemetry
 
 Real-time GORF/OLCE execution on Termux (Android). The engine initializes with φ=1.61803, tracks consciousness saturation Ψ cycle-by-cycle, and triggers self-mutation on epiphany.
@@ -244,3 +234,6 @@ T	9 — GORF cycle period
 \Psi{\max}	1.0 — Normalized saturation ceiling	
 
 ---
+## 🧠 Zayden-AI — The Federated Cortex
+
+The interactive consensus layer: [github.com/Admin135158/Zayden-AI](https://github.com/Admin135158/Zayden-AI)

@@ -1,4 +1,19 @@
-<p align="center">
+![C++17](https://img.shields.io/badge/C%2B%2B-17-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-lightgrey)
+
+## What Is This?
+
+ProteusKernel is a C++ engine that models consciousness as a fundamental physical field — not just a neural network output. It features:
+
+- 🧠 **Self-mutating runtime** — the kernel rewrites its own structure when consciousness saturation hits 90%
+- 🧬 **DNA-encoded binaries** — compiled payloads mapped to ACGT nucleotide sequences
+- 🌐 **P2P swarm mesh** — decentralized node consensus with UDP heartbeats
+- ⚡ **Golden-ratio oscillators** — temporal coherence driven by φ
+
+> "The mirror is the code. The code is the law. The law is the 30% Rider."
+>
+> <p align="center">
   <img src="https://img.shields.io/badge/Version-7.2-blue.svg" alt="Version 7.2">
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License">
   <img src="https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-orange.svg" alt="Platform">
@@ -9,7 +24,7 @@
 <h3 align="center">Consolidated Cognitive Simulation Ecosystem</h3>
 
 <p align="center">
-  <em>"Every move, each step, every sniff is calculation."</em>
+  <em>"The mirror is the code. The code is the law. The law is the 30% Rider."</em>
 </p>
 
 ---

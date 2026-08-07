@@ -1,47 +1,66 @@
-*.log
-node_secret.bin
-downloads/
-proteus_child_*
-core_bin
-
-# Proteus Engine Blocklist
-*.log
+# === Build artifacts ===
+*.o
+*.obj
+*.out
+*.exe
 *.bin
-*.state
-node_secret.bin
-zayden_memory.txt
+*.so
+*.dll
+*.dylib
+build/
+cmake-build-*/
+dist/
 
-# Compiled binaries (No extension)
-agent
-cpp_push
-dna_binary
-dna_encode
-gatekeeper
-heartbeat
-heartbeat_broadcast
-heartbeat_decoded
-heartbeat_multicast
-heartbeat_replicant
-heartbeat_secure
-hello
-mutated
+# === Proteus binaries ===
 proteus_child_*
-proteus_engine_v7
-proteus_final
 proteus_fixed
+proteus_final
+proteus_master
+proteus_kernel
 proteus_kernel_bin
 proteus_kernel_complete
-proteus_master
-proteus_v5_1
-received_heartbeat_secure
-remote_control
-rish
-shard_dna
-state_sync
-state_sync_fast
-supervisor
+proteus_engine_v7
+mutated
+
+# === Zayden binaries ===
+zayden_ultimate
+zayden_gorf
+zayden_council
+zayden_working
+zayden_final
+zayden_local
+zayden_hf
+zayden_free
+
+# === Mesh / P2P binaries ===
+heartbeat
+heartbeat_replicant
+heartbeat_broadcast
+heartbeat_secure
+heartbeat_decoded
+heartbeat_multicast
 swarm
 swarm_push
-zayden_gorf
-zayden_ultimate
-holo_spine.json
+cpp_push
+
+# === Bio / Gate / Remote ===
+agent
+dna_encode
+gatekeeper
+supervisor
+remote_control
+
+# === Runtime / Secrets ===
+*.log
+*.dna
+*.state
+node_secret.bin
+shard.dna
+.env
+*.key
+*.pem
+
+# === Dirs ===
+downloads/
+storage/
+.cache/

@@ -1,0 +1,1 @@
+{"name": "OLCE-645-868", "species": "base", "strength": 95, "mutations": 0, "age": 0, "generation": 3, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.7226695263806536, "mutation_rate": 0.1819769663683718, "curiosity": 0.4369162397888214, "survival_instinct": 0.5742644278421237}, "parent": "OLCE-645"}

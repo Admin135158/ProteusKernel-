@@ -1,0 +1,1 @@
+{"name": "OLCE-744", "species": "base", "strength": 95, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.742967185501509, "mutation_rate": 0.14397399780169767, "curiosity": 0.3120395685297179, "survival_instinct": 0.6900320369363805}, "parent": "OLCE"}

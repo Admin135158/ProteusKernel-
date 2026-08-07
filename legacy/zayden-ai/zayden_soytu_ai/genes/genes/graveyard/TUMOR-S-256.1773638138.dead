@@ -1,0 +1,1 @@
+{"name": "TUMOR-S-256", "species": "base", "strength": 76.65824598340946, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.9848280416937971, "mutation_rate": 0.05, "curiosity": 0.5328413677202942, "survival_instinct": 0.38284369766642756}, "parent": "TUMOR-S"}

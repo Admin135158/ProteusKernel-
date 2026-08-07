@@ -1,0 +1,1 @@
+{"name": "OLCE-734-531", "species": "parasite", "strength": 63.29789073569878, "mutations": 0, "age": 0, "generation": 3, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.752034804870254, "mutation_rate": 0.05, "curiosity": 0.4975759336368412, "survival_instinct": 0.556330614822242}, "parent": "OLCE-734"}

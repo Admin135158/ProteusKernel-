@@ -1,0 +1,1 @@
+{"name": "OLCE-129-533-535", "species": "parasite", "strength": 73.38339044857376, "mutations": 0, "age": 0, "generation": 4, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.790413045214654, "mutation_rate": 0.05, "curiosity": 0.33717915655736874, "survival_instinct": 0.46070728902767943}, "parent": "OLCE-129-533"}

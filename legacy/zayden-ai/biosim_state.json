@@ -1,0 +1,1763 @@
+{
+  "generation": 8069,
+  "total_births": 3515,
+  "total_degradations": 3491,
+  "total_replication_events": 118051,
+  "total_mutations": 72749,
+  "respawns": 0,
+  "genes_processed": 241989,
+  "start_time": 1773713011.062589,
+  "gorf_t": 8069.0,
+  "mode": "biology",
+  "genes": [
+    {
+      "name": "TUMOR-649",
+      "species": "robust",
+      "stability": 142.9829992139113,
+      "age": 127,
+      "replication_events": 70,
+      "offspring": 1,
+      "mutations": 40,
+      "born_gen": 7942,
+      "alive": true,
+      "replication_fidelity": 0.9551604003053418,
+      "consciousness": {
+        "C": 0.6415196466318104,
+        "S": [
+          0.7660444431189819,
+          0.6427876096865348
+        ],
+        "t": 127.0,
+        "epiphanies": 14
+      }
+    },
+    {
+      "name": "TUMOR-209",
+      "species": "robust",
+      "stability": 36.28098863020575,
+      "age": 107,
+      "replication_events": 34,
+      "offspring": 2,
+      "mutations": 26,
+      "born_gen": 7962,
+      "alive": true,
+      "replication_fidelity": 0.7710237989398755,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.7660444431189749,
+          -0.6427876096865431
+        ],
+        "t": 107.0,
+        "epiphanies": 12
+      }
+    },
+    {
+      "name": "TUMOR-647",
+      "species": "synthetic",
+      "stability": 150.0,
+      "age": 94,
+      "replication_events": 69,
+      "offspring": 2,
+      "mutations": 30,
+      "born_gen": 7975,
+      "alive": true,
+      "replication_fidelity": 0.7786733185718232,
+      "consciousness": {
+        "C": 0.5797992114871593,
+        "S": [
+          -0.9396926207859069,
+          0.34202014332567315
+        ],
+        "t": 94.0,
+        "epiphanies": 11
+      }
+    },
+    {
+      "name": "TUMOR-180",
+      "species": "robust",
+      "stability": 126.88661553184463,
+      "age": 91,
+      "replication_events": 49,
+      "offspring": 0,
+      "mutations": 27,
+      "born_gen": 7978,
+      "alive": true,
+      "replication_fidelity": 0.9025632174984549,
+      "consciousness": {
+        "C": 0.6415196466318112,
+        "S": [
+          0.766044443118981,
+          0.6427876096865359
+        ],
+        "t": 91.0,
+        "epiphanies": 10
+      }
+    },
+    {
+      "name": "TUMOR-399",
+      "species": "base",
+      "stability": 145.36686708930657,
+      "age": 84,
+      "replication_events": 40,
+      "offspring": 1,
+      "mutations": 27,
+      "born_gen": 7985,
+      "alive": true,
+      "replication_fidelity": 0.9708353997647552,
+      "consciousness": {
+        "C": 0.6801839365099859,
+        "S": [
+          -0.4999999999999963,
+          0.8660254037844408
+        ],
+        "t": 84.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-727",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 84,
+      "replication_events": 57,
+      "offspring": 1,
+      "mutations": 30,
+      "born_gen": 7985,
+      "alive": true,
+      "replication_fidelity": 0.8849619363560003,
+      "consciousness": {
+        "C": 0.6801839365099859,
+        "S": [
+          -0.4999999999999963,
+          0.8660254037844408
+        ],
+        "t": 84.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-804",
+      "species": "adaptive",
+      "stability": 144.8434779988389,
+      "age": 83,
+      "replication_events": 47,
+      "offspring": 1,
+      "mutations": 23,
+      "born_gen": 7986,
+      "alive": true,
+      "replication_fidelity": 0.7352550284518033,
+      "consciousness": {
+        "C": 0.7495381097818687,
+        "S": [
+          0.17364817766693455,
+          0.9848077530122074
+        ],
+        "t": 83.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-825",
+      "species": "synthetic",
+      "stability": 150.0,
+      "age": 82,
+      "replication_events": 50,
+      "offspring": 2,
+      "mutations": 26,
+      "born_gen": 7987,
+      "alive": true,
+      "replication_fidelity": 0.8571541341071681,
+      "consciousness": {
+        "C": 0.6415196466318062,
+        "S": [
+          0.7660444431189808,
+          0.6427876096865361
+        ],
+        "t": 82.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-523",
+      "species": "robust",
+      "stability": 61.22150691609393,
+      "age": 76,
+      "replication_events": 28,
+      "offspring": 0,
+      "mutations": 27,
+      "born_gen": 7993,
+      "alive": true,
+      "replication_fidelity": 0.9480110153367989,
+      "consciousness": {
+        "C": 0.5797992114871634,
+        "S": [
+          -0.939692620785907,
+          0.3420201433256725
+        ],
+        "t": 76.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-825",
+      "species": "parasitic",
+      "stability": 150.0,
+      "age": 75,
+      "replication_events": 36,
+      "offspring": 3,
+      "mutations": 20,
+      "born_gen": 7994,
+      "alive": true,
+      "replication_fidelity": 0.9517346960788304,
+      "consciousness": {
+        "C": 0.6801839365099873,
+        "S": [
+          -0.4999999999999966,
+          0.8660254037844407
+        ],
+        "t": 75.0,
+        "epiphanies": 8
+      }
+    },
+    {
+      "name": "TUMOR-307",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 60,
+      "replication_events": 45,
+      "offspring": 2,
+      "mutations": 21,
+      "born_gen": 8009,
+      "alive": true,
+      "replication_fidelity": 0.9641977903176276,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          -0.5000000000000028,
+          -0.8660254037844372
+        ],
+        "t": 60.0,
+        "epiphanies": 7
+      }
+    },
+    {
+      "name": "TUMOR-996",
+      "species": "efficient",
+      "stability": 8.113886685118992,
+      "age": 59,
+      "replication_events": 10,
+      "offspring": 0,
+      "mutations": 21,
+      "born_gen": 8010,
+      "alive": true,
+      "replication_fidelity": 0.9402615164971971,
+      "consciousness": {
+        "C": 0.21466466242445859,
+        "S": [
+          -0.9396926207859095,
+          -0.3420201433256658
+        ],
+        "t": 59.0,
+        "epiphanies": 7
+      }
+    },
+    {
+      "name": "TUMOR-655",
+      "species": "adaptive",
+      "stability": 138.23052307695767,
+      "age": 55,
+      "replication_events": 22,
+      "offspring": 1,
+      "mutations": 25,
+      "born_gen": 8014,
+      "alive": true,
+      "replication_fidelity": 0.8585797642926019,
+      "consciousness": {
+        "C": 0.6415196466318118,
+        "S": [
+          0.76604444311898,
+          0.6427876096865371
+        ],
+        "t": 55.0,
+        "epiphanies": 6
+      }
+    },
+    {
+      "name": "TUMOR-906",
+      "species": "aggressive",
+      "stability": 150.0,
+      "age": 51,
+      "replication_events": 37,
+      "offspring": 0,
+      "mutations": 19,
+      "born_gen": 8018,
+      "alive": true,
+      "replication_fidelity": 0.8463573648906834,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          -0.5000000000000024,
+          -0.8660254037844374
+        ],
+        "t": 51.0,
+        "epiphanies": 6
+      }
+    },
+    {
+      "name": "TUMOR-741",
+      "species": "efficient",
+      "stability": 126.64581245461541,
+      "age": 50,
+      "replication_events": 25,
+      "offspring": 0,
+      "mutations": 11,
+      "born_gen": 8019,
+      "alive": true,
+      "replication_fidelity": 0.8199888009261145,
+      "consciousness": {
+        "C": 0.2146646624244576,
+        "S": [
+          -0.9396926207859093,
+          -0.34202014332566627
+        ],
+        "t": 50.0,
+        "epiphanies": 6
+      }
+    },
+    {
+      "name": "TUMOR-471",
+      "species": "adaptive",
+      "stability": 108.76828328725824,
+      "age": 49,
+      "replication_events": 21,
+      "offspring": 0,
+      "mutations": 15,
+      "born_gen": 8020,
+      "alive": true,
+      "replication_fidelity": 0.8316232986072727,
+      "consciousness": {
+        "C": 0.5797992114871631,
+        "S": [
+          -0.9396926207859075,
+          0.34202014332567116
+        ],
+        "t": 49.0,
+        "epiphanies": 6
+      }
+    },
+    {
+      "name": "TUMOR-704",
+      "species": "synthetic",
+      "stability": 147.60814773129687,
+      "age": 46,
+      "replication_events": 28,
+      "offspring": 1,
+      "mutations": 9,
+      "born_gen": 8023,
+      "alive": true,
+      "replication_fidelity": 0.8767649933604611,
+      "consciousness": {
+        "C": 0.6415196466318122,
+        "S": [
+          0.7660444431189797,
+          0.6427876096865375
+        ],
+        "t": 46.0,
+        "epiphanies": 5
+      }
+    },
+    {
+      "name": "TUMOR-835",
+      "species": "efficient",
+      "stability": 147.21964215668677,
+      "age": 41,
+      "replication_events": 26,
+      "offspring": 1,
+      "mutations": 9,
+      "born_gen": 8028,
+      "alive": true,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.21466466242445925,
+        "S": [
+          -0.9396926207859091,
+          -0.3420201433256667
+        ],
+        "t": 41.0,
+        "epiphanies": 5
+      }
+    },
+    {
+      "name": "TUMOR-108",
+      "species": "base",
+      "stability": 70.7260123786801,
+      "age": 34,
+      "replication_events": 7,
+      "offspring": 1,
+      "mutations": 11,
+      "born_gen": 8035,
+      "alive": true,
+      "replication_fidelity": 0.90533095874701,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.17364817766692853,
+          -0.9848077530122084
+        ],
+        "t": 34.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-454",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 33,
+      "replication_events": 17,
+      "offspring": 1,
+      "mutations": 14,
+      "born_gen": 8036,
+      "alive": true,
+      "replication_fidelity": 0.8552830974081356,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          -0.5000000000000017,
+          -0.8660254037844378
+        ],
+        "t": 33.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-619",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 31,
+      "replication_events": 24,
+      "offspring": 0,
+      "mutations": 10,
+      "born_gen": 8038,
+      "alive": true,
+      "replication_fidelity": 0.9300721978732438,
+      "consciousness": {
+        "C": 0.579799211487162,
+        "S": [
+          -0.9396926207859079,
+          0.3420201433256703
+        ],
+        "t": 31.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-604",
+      "species": "parasitic",
+      "stability": 144.9097411091634,
+      "age": 22,
+      "replication_events": 13,
+      "offspring": 0,
+      "mutations": 8,
+      "born_gen": 8047,
+      "alive": true,
+      "replication_fidelity": 0.9652825461448526,
+      "consciousness": {
+        "C": 0.5797992114871622,
+        "S": [
+          -0.939692620785908,
+          0.3420201433256699
+        ],
+        "t": 22.0,
+        "epiphanies": 3
+      }
+    },
+    {
+      "name": "TUMOR-538",
+      "species": "synthetic",
+      "stability": 146.98749293696062,
+      "age": 21,
+      "replication_events": 11,
+      "offspring": 1,
+      "mutations": 6,
+      "born_gen": 8048,
+      "alive": true,
+      "replication_fidelity": 0.84917547987298,
+      "consciousness": {
+        "C": 0.6801839365099868,
+        "S": [
+          -0.499999999999999,
+          0.8660254037844393
+        ],
+        "t": 21.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-437",
+      "species": "adaptive",
+      "stability": 37.80270945819453,
+      "age": 14,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 5,
+      "born_gen": 8055,
+      "alive": true,
+      "replication_fidelity": 0.867590361578545,
+      "consciousness": {
+        "C": 0.2146646624244573,
+        "S": [
+          -0.9396926207859088,
+          -0.3420201433256679
+        ],
+        "t": 14.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-291",
+      "species": "synthetic",
+      "stability": 86.21380867774467,
+      "age": 14,
+      "replication_events": 3,
+      "offspring": 1,
+      "mutations": 5,
+      "born_gen": 8055,
+      "alive": true,
+      "replication_fidelity": 0.7156364736190941,
+      "consciousness": {
+        "C": 0.2146646624244573,
+        "S": [
+          -0.9396926207859088,
+          -0.3420201433256679
+        ],
+        "t": 14.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-667",
+      "species": "parasitic",
+      "stability": 78.35421188511162,
+      "age": 13,
+      "replication_events": 1,
+      "offspring": 0,
+      "mutations": 3,
+      "born_gen": 8056,
+      "alive": true,
+      "replication_fidelity": 0.9334208629959856,
+      "consciousness": {
+        "C": 0.5797992114871617,
+        "S": [
+          -0.9396926207859081,
+          0.34202014332566955
+        ],
+        "t": 13.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-201",
+      "species": "synthetic",
+      "stability": 48.00288706855815,
+      "age": 11,
+      "replication_events": 1,
+      "offspring": 0,
+      "mutations": 4,
+      "born_gen": 8058,
+      "alive": true,
+      "replication_fidelity": 0.7291305156346433,
+      "consciousness": {
+        "C": 0.7495381097818657,
+        "S": [
+          0.17364817766693114,
+          0.9848077530122079
+        ],
+        "t": 11.0,
+        "epiphanies": 1
+      }
+    },
+    {
+      "name": "TUMOR-899",
+      "species": "synthetic",
+      "stability": 107.80042834603151,
+      "age": 5,
+      "replication_events": 1,
+      "offspring": 0,
+      "mutations": 2,
+      "born_gen": 8064,
+      "alive": true,
+      "replication_fidelity": 0.9077365672186039,
+      "consciousness": {
+        "C": 0.2145983834889934,
+        "S": [
+          -0.9396926207859085,
+          -0.3420201433256685
+        ],
+        "t": 5.0,
+        "epiphanies": 1
+      }
+    },
+    {
+      "name": "TUMOR-760",
+      "species": "adaptive",
+      "stability": 86.96539828110008,
+      "age": 5,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 2,
+      "born_gen": 8064,
+      "alive": true,
+      "replication_fidelity": 0.7616830789881618,
+      "consciousness": {
+        "C": 0.21467634994217977,
+        "S": [
+          -0.9396926207859085,
+          -0.3420201433256685
+        ],
+        "t": 5.0,
+        "epiphanies": 1
+      }
+    },
+    {
+      "name": "TUMOR-450",
+      "species": "efficient",
+      "stability": 117.22614378845788,
+      "age": 2,
+      "replication_events": 2,
+      "offspring": 0,
+      "mutations": 0,
+      "born_gen": 8067,
+      "alive": true,
+      "replication_fidelity": 0.9542708530559133,
+      "consciousness": {
+        "C": 0.7516137934333756,
+        "S": [
+          0.17364817766693047,
+          0.9848077530122081
+        ],
+        "t": 2.0,
+        "epiphanies": 0
+      }
+    }
+  ],
+  "graveyard": [
+    {
+      "name": "TUMOR-855",
+      "species": "base",
+      "stability": 1.077413104605426,
+      "age": 3,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 0,
+      "born_gen": 7957,
+      "alive": false,
+      "replication_fidelity": 0.9120413105372623,
+      "consciousness": {
+        "C": 0.6802464457984596,
+        "S": [
+          -0.49999999999999983,
+          0.8660254037844388
+        ],
+        "t": 3.0,
+        "epiphanies": 0
+      }
+    },
+    {
+      "name": "TUMOR-577",
+      "species": "parasitic",
+      "stability": 1.0,
+      "age": 37,
+      "replication_events": 3,
+      "offspring": 0,
+      "mutations": 14,
+      "born_gen": 7924,
+      "alive": false,
+      "replication_fidelity": 0.7,
+      "consciousness": {
+        "C": 0.6415196466318123,
+        "S": [
+          0.7660444431189793,
+          0.6427876096865379
+        ],
+        "t": 37.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-984",
+      "species": "aggressive",
+      "stability": 150.0,
+      "age": 82,
+      "replication_events": 55,
+      "offspring": 2,
+      "mutations": 25,
+      "born_gen": 7880,
+      "alive": false,
+      "replication_fidelity": 0.80968369289828,
+      "consciousness": {
+        "C": 0.6415196466318062,
+        "S": [
+          0.7660444431189808,
+          0.6427876096865361
+        ],
+        "t": 82.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-275",
+      "species": "base",
+      "stability": 65.12643322755747,
+      "age": 91,
+      "replication_events": 27,
+      "offspring": 1,
+      "mutations": 21,
+      "born_gen": 7883,
+      "alive": false,
+      "replication_fidelity": 0.9067405680343036,
+      "consciousness": {
+        "C": 0.6415196466318112,
+        "S": [
+          0.766044443118981,
+          0.6427876096865359
+        ],
+        "t": 91.0,
+        "epiphanies": 10
+      }
+    },
+    {
+      "name": "TUMOR-412",
+      "species": "base",
+      "stability": 1.0,
+      "age": 16,
+      "replication_events": 1,
+      "offspring": 0,
+      "mutations": 4,
+      "born_gen": 7960,
+      "alive": false,
+      "replication_fidelity": 0.8655584219261094,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.17364817766692936,
+          -0.9848077530122082
+        ],
+        "t": 16.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-678",
+      "species": "synthetic",
+      "stability": 145.39239224072816,
+      "age": 142,
+      "replication_events": 119,
+      "offspring": 4,
+      "mutations": 41,
+      "born_gen": 7835,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.1736481776669237,
+          -0.9848077530122092
+        ],
+        "t": 142.0,
+        "epiphanies": 16
+      }
+    },
+    {
+      "name": "TUMOR-331",
+      "species": "aggressive",
+      "stability": 1.0,
+      "age": 37,
+      "replication_events": 8,
+      "offspring": 1,
+      "mutations": 17,
+      "born_gen": 7941,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.6415196466318123,
+        "S": [
+          0.7660444431189793,
+          0.6427876096865379
+        ],
+        "t": 37.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-194",
+      "species": "aggressive",
+      "stability": 150.0,
+      "age": 82,
+      "replication_events": 49,
+      "offspring": 0,
+      "mutations": 25,
+      "born_gen": 7897,
+      "alive": false,
+      "replication_fidelity": 0.8338548813265602,
+      "consciousness": {
+        "C": 0.6415196466318062,
+        "S": [
+          0.7660444431189808,
+          0.6427876096865361
+        ],
+        "t": 82.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-877",
+      "species": "aggressive",
+      "stability": 1.0,
+      "age": 2,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 1,
+      "born_gen": 7977,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.7492948337911496,
+        "S": [
+          0.17364817766693047,
+          0.9848077530122081
+        ],
+        "t": 2.0,
+        "epiphanies": 0
+      }
+    },
+    {
+      "name": "TUMOR-967",
+      "species": "base",
+      "stability": 1.0,
+      "age": 33,
+      "replication_events": 3,
+      "offspring": 0,
+      "mutations": 8,
+      "born_gen": 7950,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          -0.5000000000000017,
+          -0.8660254037844378
+        ],
+        "t": 33.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-845",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 94,
+      "replication_events": 55,
+      "offspring": 1,
+      "mutations": 26,
+      "born_gen": 7890,
+      "alive": false,
+      "replication_fidelity": 0.7885471210964355,
+      "consciousness": {
+        "C": 0.5797992114871593,
+        "S": [
+          -0.9396926207859069,
+          0.34202014332567315
+        ],
+        "t": 94.0,
+        "epiphanies": 11
+      }
+    },
+    {
+      "name": "TUMOR-243",
+      "species": "parasitic",
+      "stability": 1.0,
+      "age": 5,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 1,
+      "born_gen": 7979,
+      "alive": false,
+      "replication_fidelity": 0.8215065633932803,
+      "consciousness": {
+        "C": 0.21467440637834923,
+        "S": [
+          -0.9396926207859085,
+          -0.3420201433256685
+        ],
+        "t": 5.0,
+        "epiphanies": 1
+      }
+    },
+    {
+      "name": "TUMOR-455",
+      "species": "aggressive",
+      "stability": 1.0,
+      "age": 34,
+      "replication_events": 0,
+      "offspring": 1,
+      "mutations": 15,
+      "born_gen": 7951,
+      "alive": false,
+      "replication_fidelity": 0.9890375405944297,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.17364817766692853,
+          -0.9848077530122084
+        ],
+        "t": 34.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-274",
+      "species": "aggressive",
+      "stability": 150.0,
+      "age": 108,
+      "replication_events": 66,
+      "offspring": 1,
+      "mutations": 42,
+      "born_gen": 7878,
+      "alive": false,
+      "replication_fidelity": 0.8078453413528568,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          1.0,
+          -4.9960036108132044e-15
+        ],
+        "t": 108.0,
+        "epiphanies": 12
+      }
+    },
+    {
+      "name": "TUMOR-306",
+      "species": "base",
+      "stability": 1.0,
+      "age": 60,
+      "replication_events": 9,
+      "offspring": 2,
+      "mutations": 14,
+      "born_gen": 7926,
+      "alive": false,
+      "replication_fidelity": 0.8498506252842355,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          -0.5000000000000028,
+          -0.8660254037844372
+        ],
+        "t": 60.0,
+        "epiphanies": 7
+      }
+    },
+    {
+      "name": "TUMOR-994",
+      "species": "aggressive",
+      "stability": 1.3695680687515486,
+      "age": 2,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 0,
+      "born_gen": 7984,
+      "alive": false,
+      "replication_fidelity": 0.934531952297866,
+      "consciousness": {
+        "C": 0.7493464113649835,
+        "S": [
+          0.17364817766693047,
+          0.9848077530122081
+        ],
+        "t": 2.0,
+        "epiphanies": 0
+      }
+    },
+    {
+      "name": "TUMOR-238",
+      "species": "parasitic",
+      "stability": 134.620005493286,
+      "age": 90,
+      "replication_events": 43,
+      "offspring": 1,
+      "mutations": 27,
+      "born_gen": 7900,
+      "alive": false,
+      "replication_fidelity": 0.9330729757072664,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          1.0,
+          -4.551914400963142e-15
+        ],
+        "t": 90.0,
+        "epiphanies": 10
+      }
+    },
+    {
+      "name": "TUMOR-801",
+      "species": "parasitic",
+      "stability": 139.9432963532794,
+      "age": 133,
+      "replication_events": 56,
+      "offspring": 2,
+      "mutations": 44,
+      "born_gen": 7859,
+      "alive": false,
+      "replication_fidelity": 0.9286909537967634,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.1736481776669242,
+          -0.9848077530122092
+        ],
+        "t": 133.0,
+        "epiphanies": 15
+      }
+    },
+    {
+      "name": "TUMOR-267",
+      "species": "base",
+      "stability": 1.0,
+      "age": 84,
+      "replication_events": 19,
+      "offspring": 0,
+      "mutations": 21,
+      "born_gen": 7909,
+      "alive": false,
+      "replication_fidelity": 0.8773637295106491,
+      "consciousness": {
+        "C": 0.6801839365099859,
+        "S": [
+          -0.4999999999999963,
+          0.8660254037844408
+        ],
+        "t": 84.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-271",
+      "species": "base",
+      "stability": 1.4185623967426544,
+      "age": 17,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 4,
+      "born_gen": 7980,
+      "alive": false,
+      "replication_fidelity": 0.8825111503046961,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.7660444431189773,
+          -0.6427876096865401
+        ],
+        "t": 17.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-854",
+      "species": "base",
+      "stability": 1.0,
+      "age": 40,
+      "replication_events": 4,
+      "offspring": 2,
+      "mutations": 12,
+      "born_gen": 7963,
+      "alive": false,
+      "replication_fidelity": 0.8986939037274857,
+      "consciousness": {
+        "C": 0.579799211487162,
+        "S": [
+          -0.9396926207859077,
+          0.3420201433256707
+        ],
+        "t": 40.0,
+        "epiphanies": 5
+      }
+    },
+    {
+      "name": "TUMOR-955",
+      "species": "base",
+      "stability": 1.0,
+      "age": 14,
+      "replication_events": 0,
+      "offspring": 1,
+      "mutations": 4,
+      "born_gen": 7991,
+      "alive": false,
+      "replication_fidelity": 0.8649291147396394,
+      "consciousness": {
+        "C": 0.2146646624244573,
+        "S": [
+          -0.9396926207859088,
+          -0.3420201433256679
+        ],
+        "t": 14.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-612",
+      "species": "base",
+      "stability": 143.9316000240802,
+      "age": 111,
+      "replication_events": 58,
+      "offspring": 3,
+      "mutations": 34,
+      "born_gen": 7895,
+      "alive": false,
+      "replication_fidelity": 0.9298704692594286,
+      "consciousness": {
+        "C": 0.6801839365099874,
+        "S": [
+          -0.49999999999999556,
+          0.8660254037844413
+        ],
+        "t": 111.0,
+        "epiphanies": 12
+      }
+    },
+    {
+      "name": "TUMOR-172",
+      "species": "synthetic",
+      "stability": 150.0,
+      "age": 151,
+      "replication_events": 113,
+      "offspring": 7,
+      "mutations": 47,
+      "born_gen": 7857,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.17364817766692328,
+          -0.9848077530122094
+        ],
+        "t": 151.0,
+        "epiphanies": 17
+      }
+    },
+    {
+      "name": "TUMOR-823",
+      "species": "base",
+      "stability": 1.0,
+      "age": 21,
+      "replication_events": 1,
+      "offspring": 1,
+      "mutations": 7,
+      "born_gen": 7987,
+      "alive": false,
+      "replication_fidelity": 0.9095987186109049,
+      "consciousness": {
+        "C": 0.6801839365099868,
+        "S": [
+          -0.499999999999999,
+          0.8660254037844393
+        ],
+        "t": 21.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-630",
+      "species": "synthetic",
+      "stability": 1.0,
+      "age": 22,
+      "replication_events": 2,
+      "offspring": 0,
+      "mutations": 3,
+      "born_gen": 7987,
+      "alive": false,
+      "replication_fidelity": 0.879315014727536,
+      "consciousness": {
+        "C": 0.5797992114871622,
+        "S": [
+          -0.939692620785908,
+          0.3420201433256699
+        ],
+        "t": 22.0,
+        "epiphanies": 3
+      }
+    },
+    {
+      "name": "TUMOR-937",
+      "species": "base",
+      "stability": 1.0,
+      "age": 6,
+      "replication_events": 1,
+      "offspring": 0,
+      "mutations": 1,
+      "born_gen": 8004,
+      "alive": false,
+      "replication_fidelity": 0.9142600453639178,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          -0.5000000000000003,
+          -0.8660254037844385
+        ],
+        "t": 6.0,
+        "epiphanies": 1
+      }
+    },
+    {
+      "name": "TUMOR-172",
+      "species": "synthetic",
+      "stability": 1.0,
+      "age": 2,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 1,
+      "born_gen": 8011,
+      "alive": false,
+      "replication_fidelity": 0.9318205305684047,
+      "consciousness": {
+        "C": 0.751704743124879,
+        "S": [
+          0.17364817766693047,
+          0.9848077530122081
+        ],
+        "t": 2.0,
+        "epiphanies": 0
+      }
+    },
+    {
+      "name": "TUMOR-704",
+      "species": "synthetic",
+      "stability": 1.0,
+      "age": 8,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 3,
+      "born_gen": 8007,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.7660444431189777,
+          -0.6427876096865398
+        ],
+        "t": 8.0,
+        "epiphanies": 1
+      }
+    },
+    {
+      "name": "TUMOR-240",
+      "species": "robust",
+      "stability": 1.0,
+      "age": 67,
+      "replication_events": 13,
+      "offspring": 0,
+      "mutations": 21,
+      "born_gen": 7949,
+      "alive": false,
+      "replication_fidelity": 0.8953974455299727,
+      "consciousness": {
+        "C": 0.5797992114871631,
+        "S": [
+          -0.9396926207859072,
+          0.34202014332567193
+        ],
+        "t": 67.0,
+        "epiphanies": 8
+      }
+    },
+    {
+      "name": "TUMOR-906",
+      "species": "robust",
+      "stability": 1.0,
+      "age": 90,
+      "replication_events": 25,
+      "offspring": 1,
+      "mutations": 31,
+      "born_gen": 7927,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          1.0,
+          -4.551914400963142e-15
+        ],
+        "t": 90.0,
+        "epiphanies": 10
+      }
+    },
+    {
+      "name": "TUMOR-600",
+      "species": "base",
+      "stability": 149.36550034195676,
+      "age": 94,
+      "replication_events": 68,
+      "offspring": 0,
+      "mutations": 23,
+      "born_gen": 7924,
+      "alive": false,
+      "replication_fidelity": 0.8632211211512544,
+      "consciousness": {
+        "C": 0.5797992114871593,
+        "S": [
+          -0.9396926207859069,
+          0.34202014332567315
+        ],
+        "t": 94.0,
+        "epiphanies": 11
+      }
+    },
+    {
+      "name": "TUMOR-841",
+      "species": "robust",
+      "stability": 1.0,
+      "age": 2,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 1,
+      "born_gen": 8016,
+      "alive": false,
+      "replication_fidelity": 0.9682864019912301,
+      "consciousness": {
+        "C": 0.7493101732809471,
+        "S": [
+          0.17364817766693047,
+          0.9848077530122081
+        ],
+        "t": 2.0,
+        "epiphanies": 0
+      }
+    },
+    {
+      "name": "TUMOR-837",
+      "species": "synthetic",
+      "stability": 1.0,
+      "age": 39,
+      "replication_events": 6,
+      "offspring": 3,
+      "mutations": 8,
+      "born_gen": 7980,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.6801839365099873,
+        "S": [
+          -0.4999999999999982,
+          0.8660254037844397
+        ],
+        "t": 39.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-992",
+      "species": "aggressive",
+      "stability": 150.0,
+      "age": 99,
+      "replication_events": 68,
+      "offspring": 1,
+      "mutations": 36,
+      "born_gen": 7923,
+      "alive": false,
+      "replication_fidelity": 0.99,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          1.0,
+          -4.8849813083506896e-15
+        ],
+        "t": 99.0,
+        "epiphanies": 11
+      }
+    },
+    {
+      "name": "TUMOR-185",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 116,
+      "replication_events": 51,
+      "offspring": 1,
+      "mutations": 39,
+      "born_gen": 7907,
+      "alive": false,
+      "replication_fidelity": 0.8258925069299845,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.7660444431189746,
+          -0.6427876096865436
+        ],
+        "t": 116.0,
+        "epiphanies": 13
+      }
+    },
+    {
+      "name": "TUMOR-258",
+      "species": "aggressive",
+      "stability": 137.4084961433451,
+      "age": 83,
+      "replication_events": 47,
+      "offspring": 1,
+      "mutations": 24,
+      "born_gen": 7944,
+      "alive": false,
+      "replication_fidelity": 0.9320238030178195,
+      "consciousness": {
+        "C": 0.7495381097818687,
+        "S": [
+          0.17364817766693455,
+          0.9848077530122074
+        ],
+        "t": 83.0,
+        "epiphanies": 9
+      }
+    },
+    {
+      "name": "TUMOR-744",
+      "species": "parasitic",
+      "stability": 150.0,
+      "age": 105,
+      "replication_events": 65,
+      "offspring": 2,
+      "mutations": 37,
+      "born_gen": 7925,
+      "alive": false,
+      "replication_fidelity": 0.8560958102111579,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          -0.5000000000000043,
+          -0.8660254037844363
+        ],
+        "t": 105.0,
+        "epiphanies": 12
+      }
+    },
+    {
+      "name": "TUMOR-620",
+      "species": "parasitic",
+      "stability": 1.3931608422422395,
+      "age": 36,
+      "replication_events": 3,
+      "offspring": 1,
+      "mutations": 6,
+      "born_gen": 7998,
+      "alive": false,
+      "replication_fidelity": 0.72138875561051,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          1.0,
+          -1.942890293094024e-15
+        ],
+        "t": 36.0,
+        "epiphanies": 4
+      }
+    },
+    {
+      "name": "TUMOR-399",
+      "species": "base",
+      "stability": 1.0,
+      "age": 11,
+      "replication_events": 0,
+      "offspring": 0,
+      "mutations": 2,
+      "born_gen": 8024,
+      "alive": false,
+      "replication_fidelity": 0.9887427591876586,
+      "consciousness": {
+        "C": 0.7495381097818657,
+        "S": [
+          0.17364817766693114,
+          0.9848077530122079
+        ],
+        "t": 11.0,
+        "epiphanies": 1
+      }
+    },
+    {
+      "name": "TUMOR-280",
+      "species": "parasitic",
+      "stability": 1.0,
+      "age": 20,
+      "replication_events": 2,
+      "offspring": 1,
+      "mutations": 6,
+      "born_gen": 8017,
+      "alive": false,
+      "replication_fidelity": 0.7728221288280802,
+      "consciousness": {
+        "C": 0.7495381097818662,
+        "S": [
+          0.1736481776669315,
+          0.9848077530122079
+        ],
+        "t": 20.0,
+        "epiphanies": 2
+      }
+    },
+    {
+      "name": "TUMOR-335",
+      "species": "base",
+      "stability": 1.0,
+      "age": 40,
+      "replication_events": 3,
+      "offspring": 1,
+      "mutations": 8,
+      "born_gen": 8006,
+      "alive": false,
+      "replication_fidelity": 0.9615088397098673,
+      "consciousness": {
+        "C": 0.579799211487162,
+        "S": [
+          -0.9396926207859077,
+          0.3420201433256707
+        ],
+        "t": 40.0,
+        "epiphanies": 5
+      }
+    },
+    {
+      "name": "TUMOR-984",
+      "species": "adaptive",
+      "stability": 142.90787435106918,
+      "age": 136,
+      "replication_events": 89,
+      "offspring": 2,
+      "mutations": 44,
+      "born_gen": 7911,
+      "alive": false,
+      "replication_fidelity": 0.8760606882256912,
+      "consciousness": {
+        "C": 0.6415196466318155,
+        "S": [
+          0.7660444431189821,
+          0.6427876096865344
+        ],
+        "t": 136.0,
+        "epiphanies": 15
+      }
+    },
+    {
+      "name": "TUMOR-322",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 100,
+      "replication_events": 81,
+      "offspring": 0,
+      "mutations": 30,
+      "born_gen": 7954,
+      "alive": false,
+      "replication_fidelity": 0.9446607983234265,
+      "consciousness": {
+        "C": 0.6415196466318163,
+        "S": [
+          0.7660444431189812,
+          0.6427876096865356
+        ],
+        "t": 100.0,
+        "epiphanies": 11
+      }
+    },
+    {
+      "name": "TUMOR-445",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 96,
+      "replication_events": 74,
+      "offspring": 1,
+      "mutations": 24,
+      "born_gen": 7958,
+      "alive": false,
+      "replication_fidelity": 0.7861878604818375,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          -0.5000000000000042,
+          -0.8660254037844363
+        ],
+        "t": 96.0,
+        "epiphanies": 11
+      }
+    },
+    {
+      "name": "TUMOR-378",
+      "species": "efficient",
+      "stability": 150.0,
+      "age": 94,
+      "replication_events": 75,
+      "offspring": 0,
+      "mutations": 26,
+      "born_gen": 7961,
+      "alive": false,
+      "replication_fidelity": 0.9605031069589335,
+      "consciousness": {
+        "C": 0.5797992114871593,
+        "S": [
+          -0.9396926207859069,
+          0.34202014332567315
+        ],
+        "t": 94.0,
+        "epiphanies": 11
+      }
+    },
+    {
+      "name": "TUMOR-630",
+      "species": "parasitic",
+      "stability": 1.0,
+      "age": 48,
+      "replication_events": 1,
+      "offspring": 0,
+      "mutations": 22,
+      "born_gen": 8009,
+      "alive": false,
+      "replication_fidelity": 0.7,
+      "consciousness": {
+        "C": 0.6801839365099872,
+        "S": [
+          -0.49999999999999784,
+          0.8660254037844399
+        ],
+        "t": 48.0,
+        "epiphanies": 5
+      }
+    },
+    {
+      "name": "TUMOR-751",
+      "species": "aggressive",
+      "stability": 150.0,
+      "age": 108,
+      "replication_events": 86,
+      "offspring": 0,
+      "mutations": 42,
+      "born_gen": 7955,
+      "alive": false,
+      "replication_fidelity": 0.7984698662593123,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          1.0,
+          -4.9960036108132044e-15
+        ],
+        "t": 108.0,
+        "epiphanies": 12
+      }
+    },
+    {
+      "name": "TUMOR-111",
+      "species": "base",
+      "stability": 1.0,
+      "age": 44,
+      "replication_events": 3,
+      "offspring": 0,
+      "mutations": 16,
+      "born_gen": 8019,
+      "alive": false,
+      "replication_fidelity": 0.7967901153672643,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.7660444431189766,
+          -0.6427876096865413
+        ],
+        "t": 44.0,
+        "epiphanies": 5
+      }
+    },
+    {
+      "name": "TUMOR-878",
+      "species": "aggressive",
+      "stability": 1.0,
+      "age": 35,
+      "replication_events": 2,
+      "offspring": 0,
+      "mutations": 11,
+      "born_gen": 8031,
+      "alive": false,
+      "replication_fidelity": 0.882351379736003,
+      "consciousness": {
+        "C": 0.05,
+        "S": [
+          0.7660444431189769,
+          -0.6427876096865408
+        ],
+        "t": 35.0,
+        "epiphanies": 4
+      }
+    }
+  ],
+  "event_log": [
+    "[19:52:18] \ud83e\uddec \u001b[93mTUMOR-307\u001b[0m outcompetes TUMOR-108 (+3.5)",
+    "[19:52:18] \ud83e\uddec \u001b[91mTUMOR-906\u001b[0m outcompetes TUMOR-649 (+3.6)",
+    "[19:52:18] \ud83e\uddec \u001b[93mTUMOR-727\u001b[0m outcompetes TUMOR-704 (+5.3)",
+    "[19:52:18] \ud83e\uddec \u001b[96mTUMOR-471\u001b[0m outcompetes TUMOR-760 (+8.2)",
+    "[19:52:18] \ud83e\uddec \u001b[92mTUMOR-291\u001b[0m outcompetes TUMOR-655 (+6.9)",
+    "[19:52:18] \ud83e\uddec \u001b[93mTUMOR-835\u001b[0m outcompetes TUMOR-667 (+4.5)",
+    "[19:52:18] \ud83e\uddec \u001b[92mTUMOR-523\u001b[0m outcompetes TUMOR-201 (+6.7)",
+    "[19:52:18] \ud83e\uddec \u001b[92mTUMOR-647\u001b[0m outcompetes TUMOR-741 (+7.1)",
+    "[19:52:18] \ud83e\uddec \u001b[95mTUMOR-825\u001b[0m outcompetes TUMOR-804 (+6.3)",
+    "[19:52:18] \ud83e\uddec \u001b[93mTUMOR-454\u001b[0m outcompetes TUMOR-996 (+7.6)",
+    "[19:52:18] \ud83e\uddec \u001b[97mTUMOR-399\u001b[0m outcompetes TUMOR-209 (+6.5)",
+    "[19:52:18] \ud83e\uddec \u001b[92mTUMOR-538\u001b[0m outcompetes TUMOR-180 (+3.2)",
+    "[19:52:18] \ud83e\uddec \u001b[95mTUMOR-604\u001b[0m outcompetes TUMOR-437 (+3.9)",
+    "[19:52:18] \u2705 REPLICATION: \u001b[93mTUMOR-450\u001b[0m [C=0.28, fidelity=0.954] (Total: 3515)",
+    "[19:52:19] \ud83c\udf00 COHERENCE SPIKE at t=8068 [F=0.553] \u2014 mutation pressure surges",
+    "[19:52:19] \u2728 TUMOR-437 EPIPHANY MUTATION +2.9 [C=0.580]",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-538\u001b[0m outcompetes TUMOR-760 (+4.5)",
+    "[19:52:19] \ud83e\uddec \u001b[96mTUMOR-655\u001b[0m outcompetes TUMOR-108 (+8.7)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-996\u001b[0m outcompetes TUMOR-209 (+6.9)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-835\u001b[0m outcompetes TUMOR-437 (+7.9)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-619\u001b[0m outcompetes TUMOR-454 (+6.4)",
+    "[19:52:19] \ud83e\uddec \u001b[95mTUMOR-604\u001b[0m outcompetes TUMOR-649 (+8.5)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-307\u001b[0m outcompetes TUMOR-804 (+4.2)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-450\u001b[0m outcompetes TUMOR-471 (+3.1)",
+    "[19:52:19] \ud83e\uddec \u001b[95mTUMOR-825\u001b[0m outcompetes TUMOR-704 (+7.2)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-727\u001b[0m outcompetes TUMOR-899 (+6.5)",
+    "[19:52:19] \ud83e\uddec \u001b[91mTUMOR-906\u001b[0m outcompetes TUMOR-399 (+5.5)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-741\u001b[0m outcompetes TUMOR-523 (+8.7)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-291\u001b[0m outcompetes TUMOR-180 (+3.9)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-647\u001b[0m outcompetes TUMOR-667 (+5.0)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-825\u001b[0m outcompetes TUMOR-201 (+6.0)",
+    "[19:52:19] \u2728 TUMOR-307 EPIPHANY MUTATION +0.2 [C=0.050]",
+    "[19:52:19] \u2728 TUMOR-108 EPIPHANY MUTATION +0.2 [C=0.050]",
+    "[19:52:19] \u2728 TUMOR-454 EPIPHANY MUTATION +0.2 [C=0.050]",
+    "[19:52:19] \u2728 TUMOR-291 EPIPHANY MUTATION +1.1 [C=0.215]",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-307\u001b[0m outcompetes TUMOR-471 (+6.5)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-727\u001b[0m outcompetes TUMOR-538 (+5.0)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-450\u001b[0m outcompetes TUMOR-437 (+7.3)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-619\u001b[0m outcompetes TUMOR-835 (+4.6)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-704\u001b[0m outcompetes TUMOR-399 (+5.1)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-523\u001b[0m outcompetes TUMOR-108 (+7.6)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-741\u001b[0m outcompetes TUMOR-201 (+4.3)",
+    "[19:52:19] \ud83e\uddec \u001b[96mTUMOR-655\u001b[0m outcompetes TUMOR-209 (+7.3)",
+    "[19:52:19] \ud83e\uddec \u001b[91mTUMOR-906\u001b[0m outcompetes TUMOR-996 (+7.4)",
+    "[19:52:19] \ud83e\uddec \u001b[95mTUMOR-825\u001b[0m outcompetes TUMOR-804 (+7.4)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-180\u001b[0m outcompetes TUMOR-760 (+3.0)",
+    "[19:52:19] \ud83e\uddec \u001b[93mTUMOR-454\u001b[0m outcompetes TUMOR-899 (+8.0)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-825\u001b[0m outcompetes TUMOR-604 (+8.5)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-649\u001b[0m outcompetes TUMOR-667 (+8.7)",
+    "[19:52:19] \ud83e\uddec \u001b[92mTUMOR-647\u001b[0m outcompetes TUMOR-291 (+6.5)"
+  ],
+  "zayden": {
+    "consciousness": {
+      "C": 0.21466466242463633,
+      "S": [
+        -0.9396926207859368,
+        -0.34202014332559055
+      ],
+      "t": 8069.0,
+      "epiphanies": 897
+    },
+    "interventions": 0,
+    "purges": 0,
+    "births_granted": 0,
+    "boosts_given": 0
+  }
+}

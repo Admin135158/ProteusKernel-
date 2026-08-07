@@ -1,0 +1,1 @@
+{"name": "OLCE-842", "species": "base", "strength": 77.08461435017462, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.9087615997134819, "mutation_rate": 0.05, "curiosity": 0.46442360579795167, "survival_instinct": 0.5041632227248565}, "parent": "OLCE"}

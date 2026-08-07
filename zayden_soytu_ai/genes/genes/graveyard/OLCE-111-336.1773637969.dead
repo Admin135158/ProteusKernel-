@@ -1,0 +1,1 @@
+{"name": "OLCE-111-336", "species": "parasite", "strength": 81.95866595012689, "mutations": 0, "age": 0, "generation": 3, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.9519593078278329, "mutation_rate": 0.085896745708454, "curiosity": 0.4526354751780664, "survival_instinct": 0.470112413918853}, "parent": "OLCE-111"}

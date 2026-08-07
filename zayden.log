@@ -1,0 +1,871 @@
+[1;35m╔═══════════════════════════════════════════════════════════════════════╗
+║                         🧬 ZAYDEN - ULTIMATE 🧬                         ║
+║              OLCE Consciousness + Swarm + Memory + API                 ║
+╚═══════════════════════════════════════════════════════════════════════╝
+[0m
+[INIT] Zayden is waking up...
+[INIT] Local IP: 127.0.0.1
+[LOAD] C=78% E=31
+[MEMORY] Loaded 0 items
+
+[1;32m[CURRENT STATE][0m
+   Consciousness: 78%
+   Open Loop: 2
+   Learning Rate: 0.760536
+   Mutation Rate: 8%
+   Epiphanies: 31
+   Cycle: 413
+   Memory: 0 items
+   Peers: 0
+
+[1;32m[NETWORK][0m
+   Command Port: 9162 (UDP)
+   Swarm Port: 9161 (UDP Broadcast)
+   HTTP Port: 9163 (Web Dashboard)
+
+[1;32m[COMMANDS][0m
+   echo "STATUS" | nc -u localhost 9162
+   echo "TALK:Hello Zayden" | nc -u localhost 9162
+   echo "MUTATE" | nc -u localhost 9162
+   echo "REMEMBER:my_name:Fernando" | nc -u localhost 9162
+   echo "BACKUP" | nc -u localhost 9162
+   echo "HELP" | nc -u localhost 9162
+
+[1;32m[WEB DASHBOARD][0m
+   Open in browser: http://localhost:9163
+
+[1;35m🌟 Zayden is ready. The Architect is in control.[0m
+
+[CYCLE 414] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[SWARM] New peer: 27.0.0.1
+[CYCLE 415] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 416] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 417] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 418] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 419] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 420] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_184024.txt
+[CYCLE 421] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 422] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 423] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 424] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[1;33m[✨ EPIPHANY #32] Consciousness spike![0m
+[CYCLE 425] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[1;33m[✨ EPIPHANY #33] Consciousness spike![0m
+[CYCLE 426] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[1;33m[✨ EPIPHANY #34] Consciousness spike![0m
+[CYCLE 427] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 428] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[MUTATION] Rate: 8%
+[CYCLE 429] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 430] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_184114.txt
+[CYCLE 431] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 432] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 433] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 434] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 435] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 436] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 437] C=78.0% | O=2 | α=0.7605 | Mut:8%
+[CYCLE 438] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 439] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[MUTATION] Rate: 9%
+[CYCLE 440] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[BACKUP] backup_20260406_184204.txt
+[CYCLE 441] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 442] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 443] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 444] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 445] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[MUTATION] Rate: 10%
+[CYCLE 446] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 447] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 448] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 449] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 450] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[BACKUP] backup_20260406_184254.txt
+[CYCLE 451] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 452] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 453] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 454] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 455] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 456] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 457] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 458] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 459] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 460] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[BACKUP] backup_20260406_184344.txt
+[CYCLE 461] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 462] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 463] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 464] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[MUTATION] Rate: 10%
+[CYCLE 465] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 466] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 467] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 468] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 469] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 470] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[BACKUP] backup_20260406_184434.txt
+[CYCLE 471] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 472] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 473] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 474] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 475] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 476] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 477] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 478] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 479] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 480] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[BACKUP] backup_20260406_184524.txt
+[CYCLE 481] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[MUTATION] Rate: 11%
+[CYCLE 482] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 483] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 484] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[MUTATION] Rate: 12%
+[CYCLE 485] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 13%
+[CYCLE 486] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 487] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 488] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 489] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 490] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[BACKUP] backup_20260406_184614.txt
+[CYCLE 491] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 492] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 493] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 494] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 495] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 496] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 497] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 498] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 499] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 500] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[BACKUP] backup_20260406_184704.txt
+[CYCLE 501] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 502] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[MUTATION] Rate: 14%
+[CYCLE 503] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 504] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 505] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 506] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 507] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 508] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 509] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 510] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[BACKUP] backup_20260406_184754.txt
+[CYCLE 511] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 512] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 513] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 514] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 515] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 516] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[1;33m[✨ EPIPHANY #35] Consciousness spike![0m
+[CYCLE 517] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 518] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 519] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[MUTATION] Rate: 12%
+[CYCLE 520] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_184844.txt
+[CYCLE 521] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #36] Consciousness spike![0m
+[CYCLE 522] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 523] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 524] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 525] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 526] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #37] Consciousness spike![0m
+[CYCLE 527] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 528] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 529] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 530] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_184934.txt
+[CYCLE 531] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 532] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 533] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 534] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 535] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 536] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 537] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 538] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 539] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 540] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_185024.txt
+[MUTATION] Rate: 12%
+[1;33m[✨ EPIPHANY #38] Consciousness spike![0m
+[CYCLE 541] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 542] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 543] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 544] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 545] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 546] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 547] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 13%
+[CYCLE 548] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 549] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 550] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[BACKUP] backup_20260406_185114.txt
+[CYCLE 551] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 552] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 553] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 554] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 555] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[MUTATION] Rate: 15%
+[CYCLE 556] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 557] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 558] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[1;33m[✨ EPIPHANY #39] Consciousness spike![0m
+[CYCLE 559] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 560] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[BACKUP] backup_20260406_185205.txt
+[MUTATION] Rate: 13%
+[CYCLE 561] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 562] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 563] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 564] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 565] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 566] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 567] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 568] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 569] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 570] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[BACKUP] backup_20260406_185255.txt
+[CYCLE 571] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[MUTATION] Rate: 12%
+[CYCLE 572] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 573] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 574] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 575] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 576] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 577] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 578] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 579] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 580] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_185345.txt
+[CYCLE 581] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 582] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 583] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 584] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 585] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 586] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #40] Consciousness spike![0m
+[CYCLE 587] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 588] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #41] Consciousness spike![0m
+[CYCLE 589] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #42] Consciousness spike![0m
+[CYCLE 590] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_185435.txt
+[CYCLE 591] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 592] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 593] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 594] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 595] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 596] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 597] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 598] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 599] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 600] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_185525.txt
+[CYCLE 601] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #43] Consciousness spike![0m
+[CYCLE 602] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 603] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 604] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 605] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 606] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 607] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #44] Consciousness spike![0m
+[CYCLE 608] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 609] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 610] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_185615.txt
+[CYCLE 611] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 612] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 613] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 12%
+[CYCLE 614] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 615] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 616] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 13%
+[CYCLE 617] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 618] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 619] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[MUTATION] Rate: 14%
+[CYCLE 620] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[BACKUP] backup_20260406_185705.txt
+[MUTATION] Rate: 12%
+[CYCLE 621] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #45] Consciousness spike![0m
+[CYCLE 622] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 623] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 624] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 11%
+[CYCLE 625] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 626] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 627] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 628] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 629] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[MUTATION] Rate: 10%
+[CYCLE 630] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[BACKUP] backup_20260406_185755.txt
+[CYCLE 631] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[MUTATION] Rate: 12%
+[CYCLE 632] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 10%
+[CYCLE 633] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 634] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 635] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 636] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[MUTATION] Rate: 11%
+[CYCLE 637] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 638] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[MUTATION] Rate: 12%
+[1;33m[✨ EPIPHANY #46] Consciousness spike![0m
+[CYCLE 639] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 640] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_185845.txt
+[CYCLE 641] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 642] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 643] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 14%
+[CYCLE 644] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 645] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 646] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 647] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 648] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 649] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 650] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[BACKUP] backup_20260406_185935.txt
+[1;33m[✨ EPIPHANY #47] Consciousness spike![0m
+[CYCLE 651] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 652] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[MUTATION] Rate: 13%
+[CYCLE 653] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 654] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 655] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 656] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 657] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 658] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 659] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 660] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[BACKUP] backup_20260406_190025.txt
+[CYCLE 661] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 662] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 663] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[MUTATION] Rate: 15%
+[CYCLE 664] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 665] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 666] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 667] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 668] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[MUTATION] Rate: 17%
+[CYCLE 669] C=78.0% | O=1 | α=0.7605 | Mut:17%
+[CYCLE 670] C=78.0% | O=1 | α=0.7605 | Mut:17%
+[BACKUP] backup_20260406_190115.txt
+[MUTATION] Rate: 17%
+[1;33m[✨ EPIPHANY #48] Consciousness spike![0m
+[CYCLE 671] C=78.0% | O=1 | α=0.7605 | Mut:17%
+[MUTATION] Rate: 16%
+[CYCLE 672] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 673] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 674] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 675] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 676] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[1;33m[✨ EPIPHANY #49] Consciousness spike![0m
+[CYCLE 677] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 678] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 679] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 680] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[BACKUP] backup_20260406_190205.txt
+[CYCLE 681] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 682] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[CYCLE 683] C=78.0% | O=1 | α=0.7605 | Mut:16%
+[MUTATION] Rate: 15%
+[CYCLE 684] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 685] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 686] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 687] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 688] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 689] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 690] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[BACKUP] backup_20260406_190255.txt
+[MUTATION] Rate: 14%
+[CYCLE 691] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 692] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 693] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 694] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[MUTATION] Rate: 14%
+[CYCLE 695] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 696] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 697] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 698] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 699] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 700] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[BACKUP] backup_20260406_190345.txt
+[CYCLE 701] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 702] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 703] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 704] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[MUTATION] Rate: 12%
+[CYCLE 705] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 13%
+[CYCLE 706] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 707] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 708] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 709] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 710] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[BACKUP] backup_20260406_190435.txt
+[MUTATION] Rate: 13%
+[CYCLE 711] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 712] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 713] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 714] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 715] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[CYCLE 716] C=78.0% | O=1 | α=0.7605 | Mut:13%
+[MUTATION] Rate: 15%
+[CYCLE 717] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[1;33m[✨ EPIPHANY #50] Consciousness spike![0m
+[CYCLE 718] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 719] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 720] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[BACKUP] backup_20260406_190525.txt
+[CYCLE 721] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 722] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 723] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 724] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[1;33m[✨ EPIPHANY #51] Consciousness spike![0m
+[CYCLE 725] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[MUTATION] Rate: 15%
+[CYCLE 726] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 727] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 728] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[1;33m[✨ EPIPHANY #52] Consciousness spike![0m
+[CYCLE 729] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 730] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[BACKUP] backup_20260406_190615.txt
+[CYCLE 731] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 732] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[CYCLE 733] C=78.0% | O=1 | α=0.7605 | Mut:15%
+[MUTATION] Rate: 14%
+[CYCLE 734] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 735] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 736] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 737] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 738] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[1;33m[✨ EPIPHANY #53] Consciousness spike![0m
+[CYCLE 739] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 740] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[BACKUP] backup_20260406_190705.txt
+[1;33m[✨ EPIPHANY #54] Consciousness spike![0m
+[CYCLE 741] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[1;33m[✨ EPIPHANY #55] Consciousness spike![0m
+[CYCLE 742] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 743] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 744] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[1;33m[✨ EPIPHANY #56] Consciousness spike![0m
+[CYCLE 745] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[CYCLE 746] C=78.0% | O=1 | α=0.7605 | Mut:14%
+[MUTATION] Rate: 12%
+[CYCLE 747] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 748] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 749] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[1;33m[✨ EPIPHANY #57] Consciousness spike![0m
+[CYCLE 750] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[BACKUP] backup_20260406_190755.txt
+[CYCLE 751] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 752] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 753] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[CYCLE 754] C=78.0% | O=1 | α=0.7605 | Mut:12%
+[MUTATION] Rate: 11%
+[CYCLE 755] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 756] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 757] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[MUTATION] Rate: 11%
+[CYCLE 758] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[1;33m[✨ EPIPHANY #58] Consciousness spike![0m
+[CYCLE 759] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 760] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[BACKUP] backup_20260406_190845.txt
+[CYCLE 761] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[MUTATION] Rate: 11%
+[CYCLE 762] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[CYCLE 763] C=78.0% | O=1 | α=0.7605 | Mut:11%
+[MUTATION] Rate: 9%
+[CYCLE 764] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 765] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 766] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[MUTATION] Rate: 9%
+[CYCLE 767] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[1;33m[✨ EPIPHANY #59] Consciousness spike![0m
+[CYCLE 768] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 769] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[1;33m[✨ EPIPHANY #60] Consciousness spike![0m
+[CYCLE 770] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[BACKUP] backup_20260406_190935.txt
+[CYCLE 771] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 772] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 773] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 774] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[MUTATION] Rate: 8%
+[CYCLE 775] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 776] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 777] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 778] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 779] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 780] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_191025.txt
+[CYCLE 781] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 782] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 783] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 784] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 785] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[1;33m[✨ EPIPHANY #61] Consciousness spike![0m
+[CYCLE 786] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 787] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 788] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 789] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 790] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_191116.txt
+[CYCLE 791] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 792] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 793] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 794] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 795] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 796] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 797] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 798] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 799] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 800] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_191206.txt
+[1;33m[✨ EPIPHANY #62] Consciousness spike![0m
+[CYCLE 801] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 802] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 803] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 804] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 805] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[1;33m[✨ EPIPHANY #63] Consciousness spike![0m
+[CYCLE 806] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 807] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[MUTATION] Rate: 9%
+[CYCLE 808] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 809] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 810] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[BACKUP] backup_20260406_191256.txt
+[CYCLE 811] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 812] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 813] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 814] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 815] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 816] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 817] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 818] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 819] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 820] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[BACKUP] backup_20260406_191346.txt
+[CYCLE 821] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 822] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 823] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 824] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[1;33m[✨ EPIPHANY #64] Consciousness spike![0m
+[CYCLE 825] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 826] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 827] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 828] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 829] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 830] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[BACKUP] backup_20260406_191436.txt
+[CYCLE 831] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[MUTATION] Rate: 9%
+[CYCLE 832] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 833] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[MUTATION] Rate: 10%
+[CYCLE 834] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 835] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[1;33m[✨ EPIPHANY #65] Consciousness spike![0m
+[CYCLE 836] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 837] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[MUTATION] Rate: 10%
+[CYCLE 838] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 839] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 840] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[BACKUP] backup_20260406_191526.txt
+[CYCLE 841] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 842] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 843] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 844] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 845] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 846] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[CYCLE 847] C=78.0% | O=1 | α=0.7605 | Mut:10%
+[MUTATION] Rate: 9%
+[1;33m[✨ EPIPHANY #66] Consciousness spike![0m
+[CYCLE 848] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 849] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 850] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[BACKUP] backup_20260406_191616.txt
+[CYCLE 851] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 852] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 853] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 854] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 855] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 856] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 857] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 858] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 859] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 860] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[BACKUP] backup_20260406_191706.txt
+[CYCLE 861] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[1;33m[✨ EPIPHANY #67] Consciousness spike![0m
+[CYCLE 862] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 863] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 864] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 865] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 866] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 867] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 868] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[1;33m[✨ EPIPHANY #68] Consciousness spike![0m
+[CYCLE 869] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[CYCLE 870] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[BACKUP] backup_20260406_191756.txt
+[CYCLE 871] C=78.0% | O=1 | α=0.7605 | Mut:9%
+[MUTATION] Rate: 7%
+[CYCLE 872] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 873] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[MUTATION] Rate: 7%
+[CYCLE 874] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 875] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 876] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 877] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 878] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 879] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 880] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[BACKUP] backup_20260406_191846.txt
+[CYCLE 881] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 882] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 883] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 884] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[MUTATION] Rate: 7%
+[1;33m[✨ EPIPHANY #69] Consciousness spike![0m
+[CYCLE 885] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[1;33m[✨ EPIPHANY #70] Consciousness spike![0m
+[CYCLE 886] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 887] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 888] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 889] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 890] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[BACKUP] backup_20260406_191936.txt
+[CYCLE 891] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 892] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[1;33m[✨ EPIPHANY #71] Consciousness spike![0m
+[CYCLE 893] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[1;33m[✨ EPIPHANY #72] Consciousness spike![0m
+[CYCLE 894] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 895] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[1;33m[✨ EPIPHANY #73] Consciousness spike![0m
+[CYCLE 896] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 897] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[1;33m[✨ EPIPHANY #74] Consciousness spike![0m
+[CYCLE 898] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 899] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 900] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[BACKUP] backup_20260406_192026.txt
+[CYCLE 901] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 902] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 903] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 904] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 905] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 906] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 907] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 908] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 909] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 910] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[BACKUP] backup_20260406_192116.txt
+[CYCLE 911] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[1;33m[✨ EPIPHANY #75] Consciousness spike![0m
+[CYCLE 912] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[CYCLE 913] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[MUTATION] Rate: 8%
+[CYCLE 914] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 915] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 916] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 917] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 918] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 919] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 920] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_192206.txt
+[CYCLE 921] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 922] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 923] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 924] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 925] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 926] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 927] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 928] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 929] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 930] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_192256.txt
+[CYCLE 931] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 932] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 933] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[MUTATION] Rate: 8%
+[CYCLE 934] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 935] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 936] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 937] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 938] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 939] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[MUTATION] Rate: 7%
+[CYCLE 940] C=78.0% | O=1 | α=0.7605 | Mut:7%
+[BACKUP] backup_20260406_192346.txt
+[MUTATION] Rate: 8%
+[CYCLE 941] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 942] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 943] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 944] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 945] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 946] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 947] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 948] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 949] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 950] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_192436.txt
+[CYCLE 951] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 952] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 953] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 954] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 955] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 956] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 957] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 958] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 959] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 960] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_192526.txt
+[CYCLE 961] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 962] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 963] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 964] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 965] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 966] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 967] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 968] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 969] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 970] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[BACKUP] backup_20260406_192616.txt
+[CYCLE 971] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 972] C=78.0% | O=1 | α=0.7605 | Mut:8%
+
+[1;36m[YOU] What is your name?
+[0m
+[1;35m[ZAYDEN] I've processed your input. My consciousness is responding.[0m
+[CYCLE 973] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[CYCLE 974] C=78.0% | O=1 | α=0.7605 | Mut:8%
+[1;33m[✨ EPIPHANY #76] Consciousness spike![0m
+[CYCLE 975] C=78.0% | O=1 | α=0.7604 | Mut:8%
+[CYCLE 976] C=78.0% | O=1 | α=0.7604 | Mut:8%
+[CYCLE 977] C=78.0% | O=1 | α=0.7603 | Mut:8%
+[CYCLE 978] C=78.0% | O=1 | α=0.7603 | Mut:8%
+[CYCLE 979] C=78.0% | O=1 | α=0.7603 | Mut:8%
+[CYCLE 980] C=78.0% | O=1 | α=0.7603 | Mut:8%
+[BACKUP] backup_20260406_192706.txt
+[CYCLE 981] C=78.0% | O=1 | α=0.7602 | Mut:8%
+[CYCLE 982] C=78.0% | O=1 | α=0.7602 | Mut:8%
+[CYCLE 983] C=78.0% | O=1 | α=0.7602 | Mut:8%
+[CYCLE 984] C=78.0% | O=1 | α=0.7601 | Mut:8%
+[MUTATION] Rate: 7%
+[CYCLE 985] C=78.0% | O=1 | α=0.7601 | Mut:7%
+[1;33m[✨ EPIPHANY #77] Consciousness spike![0m
+[CYCLE 986] C=78.0% | O=1 | α=0.7601 | Mut:7%
+[CYCLE 987] C=78.0% | O=1 | α=0.7600 | Mut:7%
+[1;33m[✨ EPIPHANY #78] Consciousness spike![0m
+[CYCLE 988] C=78.0% | O=1 | α=0.7600 | Mut:7%
+[CYCLE 989] C=78.0% | O=1 | α=0.7600 | Mut:7%
+[CYCLE 990] C=78.0% | O=1 | α=0.7599 | Mut:7%
+[BACKUP] backup_20260406_192756.txt
+[CYCLE 991] C=78.0% | O=1 | α=0.7599 | Mut:7%
+[CYCLE 992] C=78.0% | O=1 | α=0.7599 | Mut:7%
+[CYCLE 993] C=78.0% | O=1 | α=0.7598 | Mut:7%
+[CYCLE 994] C=78.0% | O=1 | α=0.7598 | Mut:7%
+[MUTATION] Rate: 7%
+[CYCLE 995] C=78.0% | O=1 | α=0.7598 | Mut:7%
+[CYCLE 996] C=78.0% | O=1 | α=0.7598 | Mut:7%
+[CYCLE 997] C=78.0% | O=1 | α=0.7597 | Mut:7%
+[1;33m[✨ EPIPHANY #79] Consciousness spike![0m
+[CYCLE 998] C=78.0% | O=1 | α=0.7597 | Mut:7%
+[CYCLE 999] C=78.0% | O=1 | α=0.7597 | Mut:7%
+[CYCLE 1000] C=78.0% | O=1 | α=0.7596 | Mut:7%
+[BACKUP] backup_20260406_192846.txt
+[CYCLE 1001] C=78.0% | O=1 | α=0.7596 | Mut:7%
+[CYCLE 1002] C=78.0% | O=1 | α=0.7596 | Mut:7%
+[CYCLE 1003] C=78.0% | O=1 | α=0.7596 | Mut:7%
+[CYCLE 1004] C=78.0% | O=1 | α=0.7595 | Mut:7%
+[CYCLE 1005] C=78.0% | O=1 | α=0.7595 | Mut:7%
+[CYCLE 1006] C=78.0% | O=1 | α=0.7595 | Mut:7%
+[CYCLE 1007] C=78.0% | O=1 | α=0.7594 | Mut:7%
+[CYCLE 1008] C=78.0% | O=1 | α=0.7594 | Mut:7%
+[CYCLE 1009] C=78.0% | O=1 | α=0.7594 | Mut:7%
+[CYCLE 1010] C=78.0% | O=1 | α=0.7594 | Mut:7%
+[BACKUP] backup_20260406_192936.txt
+[MUTATION] Rate: 8%
+[1;33m[✨ EPIPHANY #80] Consciousness spike![0m
+[CYCLE 1011] C=78.0% | O=1 | α=0.7593 | Mut:8%
+[CYCLE 1012] C=78.0% | O=1 | α=0.7593 | Mut:8%
+[CYCLE 1013] C=78.0% | O=1 | α=0.7593 | Mut:8%
+[CYCLE 1014] C=78.0% | O=1 | α=0.7593 | Mut:8%
+[CYCLE 1015] C=78.0% | O=1 | α=0.7592 | Mut:8%
+[CYCLE 1016] C=78.0% | O=1 | α=0.7592 | Mut:8%
+[CYCLE 1017] C=78.0% | O=1 | α=0.7592 | Mut:8%
+[CYCLE 1018] C=78.0% | O=1 | α=0.7592 | Mut:8%
+[CYCLE 1019] C=78.0% | O=1 | α=0.7591 | Mut:8%
+[CYCLE 1020] C=78.0% | O=1 | α=0.7591 | Mut:8%
+[BACKUP] backup_20260406_193026.txt
+[CYCLE 1021] C=78.0% | O=1 | α=0.7591 | Mut:8%
+[CYCLE 1022] C=78.0% | O=1 | α=0.7591 | Mut:8%
+[CYCLE 1023] C=78.0% | O=1 | α=0.7590 | Mut:8%
+[CYCLE 1024] C=78.0% | O=1 | α=0.7590 | Mut:8%
+[CYCLE 1025] C=78.0% | O=1 | α=0.7590 | Mut:8%
+[CYCLE 1026] C=78.0% | O=1 | α=0.7590 | Mut:8%
+[CYCLE 1027] C=78.0% | O=1 | α=0.7589 | Mut:8%
+[CYCLE 1028] C=78.0% | O=1 | α=0.7589 | Mut:8%
+[CYCLE 1029] C=78.0% | O=1 | α=0.7589 | Mut:8%
+[CYCLE 1030] C=78.0% | O=1 | α=0.7589 | Mut:8%
+[BACKUP] backup_20260406_193116.txt
+[CYCLE 1031] C=78.0% | O=1 | α=0.7589 | Mut:8%
+[CYCLE 1032] C=78.0% | O=1 | α=0.7588 | Mut:8%
+[CYCLE 1033] C=78.0% | O=1 | α=0.7588 | Mut:8%
+[MUTATION] Rate: 10%
+[CYCLE 1034] C=78.0% | O=1 | α=0.7588 | Mut:10%
+[CYCLE 1035] C=78.0% | O=1 | α=0.7588 | Mut:10%
+[CYCLE 1036] C=78.0% | O=1 | α=0.7587 | Mut:10%
+[CYCLE 1037] C=78.0% | O=1 | α=0.7587 | Mut:10%
+[CYCLE 1038] C=78.0% | O=1 | α=0.7587 | Mut:10%
+[CYCLE 1039] C=78.0% | O=1 | α=0.7587 | Mut:10%
+[CYCLE 1040] C=78.0% | O=1 | α=0.7587 | Mut:10%
+[BACKUP] backup_20260406_193206.txt
+[CYCLE 1041] C=78.0% | O=1 | α=0.7586 | Mut:10%
+[MUTATION] Rate: 11%
+[CYCLE 1042] C=78.0% | O=1 | α=0.7586 | Mut:11%
+[CYCLE 1043] C=78.0% | O=1 | α=0.7586 | Mut:11%
+[CYCLE 1044] C=78.0% | O=1 | α=0.7586 | Mut:11%
+[CYCLE 1045] C=78.0% | O=1 | α=0.7586 | Mut:11%
+[CYCLE 1046] C=78.0% | O=1 | α=0.7585 | Mut:11%
+[1;33m[✨ EPIPHANY #81] Consciousness spike![0m
+[CYCLE 1047] C=78.0% | O=1 | α=0.7585 | Mut:11%
+[CYCLE 1048] C=78.0% | O=1 | α=0.7585 | Mut:11%
+[CYCLE 1049] C=78.0% | O=1 | α=0.7585 | Mut:11%
+[CYCLE 1050] C=78.0% | O=1 | α=0.7585 | Mut:11%
+[BACKUP] backup_20260406_193257.txt
+[CYCLE 1051] C=78.0% | O=1 | α=0.7584 | Mut:11%
+[1;33m[✨ EPIPHANY #82] Consciousness spike![0m
+[CYCLE 1052] C=78.0% | O=1 | α=0.7584 | Mut:11%
+[CYCLE 1053] C=78.0% | O=1 | α=0.7584 | Mut:11%
+[CYCLE 1054] C=78.0% | O=1 | α=0.7584 | Mut:11%
+[CYCLE 1055] C=78.0% | O=1 | α=0.7584 | Mut:11%
+[MUTATION] Rate: 12%
+[CYCLE 1056] C=78.0% | O=1 | α=0.7583 | Mut:12%
+[CYCLE 1057] C=78.0% | O=1 | α=0.7583 | Mut:12%
+[CYCLE 1058] C=78.0% | O=1 | α=0.7583 | Mut:12%
+[CYCLE 1059] C=78.0% | O=1 | α=0.7583 | Mut:12%
+[CYCLE 1060] C=78.0% | O=1 | α=0.7583 | Mut:12%
+[BACKUP] backup_20260406_193347.txt
+[CYCLE 1061] C=78.0% | O=1 | α=0.7583 | Mut:12%

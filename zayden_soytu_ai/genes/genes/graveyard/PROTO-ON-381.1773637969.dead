@@ -1,0 +1,1 @@
+{"name": "PROTO-ON-381", "species": "base", "strength": 93.95274444689888, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.6506366503804213, "mutation_rate": 0.10909638067983293, "curiosity": 0.4718482979756366, "survival_instinct": 0.6399926317725951}, "parent": "PROTO-ON"}

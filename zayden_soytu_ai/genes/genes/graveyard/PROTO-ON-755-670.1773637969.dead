@@ -1,0 +1,1 @@
+{"name": "PROTO-ON-755-670", "species": "base", "strength": 76.87551513748615, "mutations": 0, "age": 0, "generation": 3, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.735767064463053, "mutation_rate": 0.05, "curiosity": 0.5805849722226312, "survival_instinct": 0.8189375152700149}, "parent": "PROTO-ON-755"}

@@ -1,0 +1,1 @@
+{"name": "PROTO-ON-851", "species": "base", "strength": 79.58551635028529, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.7800854872788958, "mutation_rate": 0.05, "curiosity": 0.6013072996741369, "survival_instinct": 0.7910430328551193}, "parent": "PROTO-ON"}

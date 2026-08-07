@@ -1,0 +1,14 @@
+# Backup files
+backup_*.txt
+backup_*.dna
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+*~
+
+# Compiled binaries
+zayden_ai
+zayden_ultimate
+zayden_standalone

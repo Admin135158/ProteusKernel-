@@ -1,0 +1,1 @@
+{"name": "PROTO-ON-337", "species": "parasite", "strength": 57.285621207618874, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.6687080210199439, "mutation_rate": 0.05606452570470549, "curiosity": 0.5041723299937356, "survival_instinct": 0.6815121675264376}, "parent": "PROTO-ON"}

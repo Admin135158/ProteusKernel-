@@ -1,0 +1,10 @@
+# ZAYDEN ULTIMATE BACKUP
+C=78.0016
+O=1
+α=0.746217
+β=0.3819
+cycle=6590
+epiphanies=550
+mutation_rate=0.0747399
+name=Zayden
+memory_size=0

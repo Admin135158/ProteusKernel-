@@ -1,0 +1,1 @@
+{"name": "TUMOR-S-580", "species": "base", "strength": 68.74555587170727, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.9028389038947363, "mutation_rate": 0.07528055250724221, "curiosity": 0.4930241123366814, "survival_instinct": 0.32211205728020087}, "parent": "TUMOR-S"}

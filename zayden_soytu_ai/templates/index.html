@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAYDEN SOYTU AI - SYNC-7</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid #00ff88;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px #00ff88;
+        }
+        
+        .header .subtitle {
+            color: #888;
+            margin-top: 10px;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid #00ff88;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-card .label {
+            color: #888;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .stat-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-top: 10px;
+            text-shadow: 0 0 10px #00ff88;
+        }
+        
+        /* Main Chat */
+        .chat-container {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ff88;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #00ff88;
+            background: rgba(0, 255, 136, 0.02);
+        }
+        
+        .message .sender {
+            color: #00ff88;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .message .text {
+            color: #fff;
+            margin-left: 20px;
+        }
+        
+        .message .meta {
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+        
+        .input-area {
+            display: flex;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid #00ff88;
+        }
+        
+        .input-area input {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ff88;
+            padding: 15px;
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        
+        .input-area input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #00ff88;
+        }
+        
+        .input-area button {
+            background: #00ff88;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .input-area button:hover {
+            background: #00cc66;
+            box-shadow: 0 0 20px #00ff88;
+        }
+        
+        /* Bottom Grid */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .panel {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid #00ff88;
+            border-radius: 10px;
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .panel h3 {
+            color: #00ff88;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        
+        .gene-item, .node-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 5px;
+        }
+        
+        .gene-name {
+            color: #00ff88;
+            font-weight: bold;
+        }
+        
+        .gene-species {
+            color: #ffaa00;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        
+        .gene-strength {
+            float: right;
+            color: #00ff88;
+        }
+        
+        .strength-bar {
+            height: 5px;
+            background: rgba(0, 255, 136, 0.2);
+            margin-top: 5px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .strength-fill {
+            height: 100%;
+            background: #00ff88;
+            transition: width 0.3s;
+        }
+        
+        .active-badge {
+            color: #00ff88;
+            margin-left: 10px;
+            font-size: 0.8em;
+        }
+        
+        .node-id {
+            color: #00ff88;
+            font-weight: bold;
+        }
+        
+        .node-platform {
+            color: #fff;
+            margin-left: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0,255,136,.3);
+            border-radius: 50%;
+            border-top-color: #00ff88;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>ZAYDEN SOYTU AI</h1>
+            <div class="subtitle">SYNC-7 PROTOCOL | THE ARCHITECT'S GRID</div>
+        </div>
+        
+        <!-- Stats Grid -->
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <div class="label">Uptime</div>
+                <div class="value" id="uptime">0s</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Nodes</div>
+                <div class="value" id="nodeCount">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Genes</div>
+                <div class="value" id="geneCount">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Active Genes</div>
+                <div class="value" id="activeGenes">0</div>
+            </div>
+        </div>
+        
+        <!-- Chat -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="input-area">
+                <input type="text" id="promptInput" placeholder="Enter your prompt..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendPrompt()">SEND</button>
+            </div>
+        </div>
+        
+        <!-- Bottom Grid -->
+        <div class="bottom-grid">
+            <!-- Genes Panel -->
+            <div class="panel">
+                <h3>🧬 ACTIVE GENES</h3>
+                <div id="genesList"></div>
+            </div>
+            
+            <!-- Nodes Panel -->
+            <div class="panel">
+                <h3>🌐 NETWORK NODES</h3>
+                <div id="nodesList"></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            ZAYDEN SOYTU AI v1.0 | Built by The Architect | Powered by PROTEUS
+        </div>
+    </div>
+    
+    <script>
+        const socket = io();
+        let messages = [];
+        
+        // Socket events
+        socket.on('connect', () => {
+            console.log('Connected to server');
+            addMessage('System', 'Connected to Zayden Soytu AI', '#00ff88');
+        });
+        
+        socket.on('new_response', (data) => {
+            addMessage('ZS AI', data.response, '#00ff88', `Confidence: ${data.confidence.toFixed(1)}%`);
+        });
+        
+        socket.on('evolution', (data) => {
+            addMessage('System', `Evolution Generation ${data.generation}`, '#ffaa00');
+            updateGenes();
+        });
+        
+        // Add message to chat
+        function addMessage(sender, text, color = '#00ff88', meta = '') {
+            const messagesDiv = document.getElementById('chatMessages');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'message';
+            msgDiv.innerHTML = `
+                <div class="sender" style="color: ${color}">${sender}</div>
+                <div class="text">${text}</div>
+                ${meta ? `<div class="meta">${meta}</div>` : ''}
+            `;
+            messagesDiv.appendChild(msgDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        // Send prompt
+        async function sendPrompt() {
+            const input = document.getElementById('promptInput');
+            const prompt = input.value.trim();
+            
+            if (!prompt) return;
+            
+            addMessage('You', prompt, '#ffaa00');
+            input.value = '';
+            
+            try {
+                const response = await fetch('/api/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ prompt })
+                });
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    addMessage('System', `Error: ${data.error}`, '#ff5555');
+                }
+                
+                // Update stats after query
+                updateStats();
+                updateGenes();
+                updateNodes();
+                
+            } catch (error) {
+                addMessage('System', `Error: ${error.message}`, '#ff5555');
+            }
+        }
+        
+        // Handle enter key
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendPrompt();
+            }
+        }
+        
+        // Update stats
+        async function updateStats() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                
+                document.getElementById('uptime').textContent = formatUptime(data.uptime);
+                document.getElementById('nodeCount').textContent = data.nodes || 0;
+                document.getElementById('geneCount').textContent = data.genes || 0;
+                document.getElementById('activeGenes').textContent = data.active_genes || 0;
+                
+            } catch (error) {
+                console.error('Failed to update stats:', error);
+            }
+        }
+        
+        // Update genes list
+        async function updateGenes() {
+            try {
+                const response = await fetch('/api/genes');
+                const data = await response.json();
+                
+                const genesList = document.getElementById('genesList');
+                genesList.innerHTML = '';
+                
+                if (data.genes && data.genes.length > 0) {
+                    data.genes.forEach(gene => {
+                        const geneDiv = document.createElement('div');
+                        geneDiv.className = 'gene-item';
+                        geneDiv.innerHTML = `
+                            <div>
+                                <span class="gene-name">${gene.name}</span>
+                                <span class="gene-species">[${gene.species}]</span>
+                                <span class="gene-strength">${gene.strength.toFixed(1)}%</span>
+                                ${gene.active ? '<span class="active-badge">🟢</span>' : ''}
+                            </div>
+                            <div class="strength-bar">
+                                <div class="strength-fill" style="width: ${gene.strength}%"></div>
+                            </div>
+                            <div style="font-size: 0.8em; color: #666; margin-top: 5px">
+                                μ:${gene.mutations} | ⚔️:${gene.kills} | 🧬:${gene.children}
+                            </div>
+                        `;
+                        genesList.appendChild(geneDiv);
+                    });
+                } else {
+                    genesList.innerHTML = '<div style="color: #666; text-align: center">No genes found</div>';
+                }
+                
+            } catch (error) {
+                console.error('Failed to update genes:', error);
+            }
+        }
+        
+        // Update nodes list
+        async function updateNodes() {
+            try {
+                const response = await fetch('/api/nodes');
+                const data = await response.json();
+                
+                const nodesList = document.getElementById('nodesList');
+                nodesList.innerHTML = '';
+                
+                if (data.nodes && data.nodes.length > 0) {
+                    data.nodes.sort((a, b) => a.id - b.id).forEach(node => {
+                        const nodeDiv = document.createElement('div');
+                        nodeDiv.className = 'node-item';
+                        
+                        let statsHtml = '';
+                        if (node.stats) {
+                            if (node.stats.models) {
+                                // Ensemble node
+                                statsHtml = '<div style="font-size: 0.8em; color: #666; margin-top: 5px">';
+                                node.stats.models.forEach(model => {
+                                    statsHtml += `📊 ${model.name}: ${model.queries} queries, ${model.avg_time}<br>`;
+                                });
+                                statsHtml += '</div>';
+                            } else {
+                                statsHtml = `<div style="font-size: 0.8em; color: #666; margin-top: 5px">Queries: ${node.stats.queries || 0}</div>`;
+                            }
+                        }
+                        
+                        nodeDiv.innerHTML = `
+                            <div>
+                                <span class="node-id">Node ${node.id}</span>
+                                <span class="node-platform">${node.platform}</span>
+                            </div>
+                            ${statsHtml}
+                        `;
+                        nodesList.appendChild(nodeDiv);
+                    });
+                } else {
+                    nodesList.innerHTML = '<div style="color: #666; text-align: center">No nodes found</div>';
+                }
+                
+            } catch (error) {
+                console.error('Failed to update nodes:', error);
+            }
+        }
+        
+        // Format uptime
+        function formatUptime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            
+            if (hours > 0) {
+                return `${hours}h ${minutes}m ${secs}s`;
+            } else if (minutes > 0) {
+                return `${minutes}m ${secs}s`;
+            } else {
+                return `${secs}s`;
+            }
+        }
+        
+        // Initial updates
+        updateStats();
+        updateGenes();
+        updateNodes();
+        
+        // Update stats every 5 seconds
+        setInterval(() => {
+            updateStats();
+            updateGenes();
+            updateNodes();
+        }, 5000);
+    </script>
+</body>
+</html>

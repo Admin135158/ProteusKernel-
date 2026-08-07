@@ -1,0 +1,1 @@
+{"name": "TUMOR-S-666-792-179-877-580-932", "species": "base", "strength": 71.72458907991432, "mutations": 0, "age": 0, "generation": 7, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.8545874682318519, "mutation_rate": 0.24550615219120078, "curiosity": 0.4930094028153428, "survival_instinct": 0.2786260367375637}, "parent": "TUMOR-S-666-792-179-877-580"}

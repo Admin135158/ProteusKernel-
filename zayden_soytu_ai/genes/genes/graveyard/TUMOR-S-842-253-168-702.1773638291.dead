@@ -1,0 +1,1 @@
+{"name": "TUMOR-S-842-253-168-702", "species": "base", "strength": 51.28826503712577, "mutations": 0, "age": 0, "generation": 5, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.943749171093121, "mutation_rate": 0.26617725679608817, "curiosity": 0.698355175242531, "survival_instinct": 0.3614758268569732}, "parent": "TUMOR-S-842-253-168"}

@@ -1,0 +1,1 @@
+{"name": "OLCE-730", "species": "base", "strength": 95, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.9639491353831132, "mutation_rate": 0.06592627274969781, "curiosity": 0.32070327778587265, "survival_instinct": 0.5431841579308097}, "parent": "OLCE"}

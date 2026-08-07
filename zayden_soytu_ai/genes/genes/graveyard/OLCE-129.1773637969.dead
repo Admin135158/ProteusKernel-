@@ -1,0 +1,1 @@
+{"name": "OLCE-129", "species": "base", "strength": 76.21116076025181, "mutations": 0, "age": 0, "generation": 2, "code_version": 1, "kills": 0, "children": 0, "weights": {"aggression": 0.9085141082544251, "mutation_rate": 0.05283806543939936, "curiosity": 0.3505933842895976, "survival_instinct": 0.5358633455109509}, "parent": "OLCE"}

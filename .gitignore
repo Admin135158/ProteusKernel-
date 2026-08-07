@@ -1,18 +1,18 @@
-# Logs & Shell History
-*.log
-.bash_history
-.wget-hsts
-
-# Binaries & Compiled Executables
-*.bin
+# Binaries
 *.o
-*.so
+*.out
 dna_binary
-heartbeat
-node_secret.bin
-proteus_child_*
+consensus_test
+zayden_full
+gate/supervisor
+mesh/heartbeat
+zayden_gorf
+heartbeat_secure
 
-# State & Cache
-downloads/
-node_modules/
-.cache/
+# Backups
+backup_*
+*.bak
+
+# Termux / build artifacts
+*.log
+*.tmp

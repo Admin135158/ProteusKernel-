@@ -1,136 +1,140 @@
+/*
+ * SPDX-License-Identifier: Proprietary
+ * Copyright (c) 2026 Fernando De Jesus Garcia Gonzalez (The Architect)
+ */
 #include <iostream>
 #include <vector>
 #include <string>
-#include <map>
+#include <cstring>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <signal.h>
+#include <csignal>
 #include <thread>
 #include <chrono>
-#include <csignal>
 #include <atomic>
-#include <mutex>
-#include <sys/wait.h>
-#include <unistd.h>
-#include <cstring>
 
-std::atomic<bool> running{true};
-
-struct ManagedProcess {
+struct Process {
     std::string name;
-    std::string binary;
-    std::vector<std::string> args;
+    std::string path;
     pid_t pid;
-    int restart_count;
-    std::chrono::steady_clock::time_point last_start;
+    bool enabled;
 };
 
-std::vector<ManagedProcess> processes;
-std::mutex proc_mutex;
+std::vector<Process> processes;
+std::atomic<bool> g_running(true);
 
 void signal_handler(int sig) {
     std::cout << "\n[SUPERVISOR] Caught signal " << sig << ". Shutting down...\n";
-    running = false;
+    g_running = false;
 }
 
-pid_t spawn(const std::string& binary, const std::vector<std::string>& args) {
+bool file_exists_and_executable(const std::string& path) {
+    return access(path.c_str(), X_OK) == 0;
+}
+
+std::string find_binary(const std::string& name) {
+    std::vector<std::string> paths = {
+        "./" + name,
+        "./build/" + name,
+        "./src/" + name,
+        "./mesh/" + name,
+        "./gate/" + name
+    };
+    for (const auto& p : paths) {
+        if (file_exists_and_executable(p)) return p;
+    }
+    return "";
+}
+
+pid_t start_process(const std::string& name, const std::string& path) {
     pid_t pid = fork();
     if (pid == 0) {
-        std::vector<char*> argv;
-        argv.push_back(const_cast<char*>(binary.c_str()));
-        for (const auto& a : args) {
-            argv.push_back(const_cast<char*>(a.c_str()));
-        }
-        argv.push_back(nullptr);
-        execv(binary.c_str(), argv.data());
-        std::cerr << "[SUPERVISOR] exec failed: " << strerror(errno) << " (" << binary << ")\n";
+        execl(path.c_str(), path.c_str(), nullptr);
+        std::cerr << "[SUPERVISOR] Failed to start " << name << " from " << path
+                  << ": " << strerror(errno) << "\n";
         exit(1);
+    } else if (pid > 0) {
+        std::cout << "[SUPERVISOR] Started " << name << " (PID: " << pid << ")\n";
+        return pid;
     }
-    return pid;
+    return -1;
 }
 
-void monitor() {
-    while (running) {
-        {
-            std::lock_guard<std::mutex> lock(proc_mutex);
-            for (auto& p : processes) {
+void monitor_loop() {
+    while (g_running) {
+        for (auto& proc : processes) {
+            if (!proc.enabled || proc.path.empty()) continue;
+
+            if (proc.pid > 0) {
                 int status;
-                pid_t result = waitpid(p.pid, &status, WNOHANG);
-                if (result == p.pid) {
-                    std::cout << "[SUPERVISOR] " << p.name << " (PID " << p.pid << ") died";
-                    if (WIFEXITED(status)) {
-                        std::cout << " with exit code " << WEXITSTATUS(status);
-                    } else if (WIFSIGNALED(status)) {
-                        std::cout << " by signal " << WTERMSIG(status);
-                    }
-                    std::cout << "\n";
-
-                    auto now = std::chrono::steady_clock::now();
-                    auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(now - p.last_start).count();
-                    
-                    if (elapsed < 5) {
-                        std::cout << "[SUPERVISOR] " << p.name << " restarted too fast. Backing off 5s...\n";
-                        std::this_thread::sleep_for(std::chrono::seconds(5));
-                    }
-
-                    p.pid = spawn(p.binary, p.args);
-                    p.last_start = std::chrono::steady_clock::now();
-                    p.restart_count++;
-                    std::cout << "[SUPERVISOR] " << p.name << " restarted (PID " << p.pid 
-                              << ", restart #" << p.restart_count << ")\n";
+                pid_t result = waitpid(proc.pid, &status, WNOHANG);
+                if (result == proc.pid) {
+                    std::cout << "[SUPERVISOR] " << proc.name << " (PID " << proc.pid
+                              << ") exited. Restarting...\n";
+                    proc.pid = start_process(proc.name, proc.path);
+                } else if (result == -1) {
+                    std::cout << "[SUPERVISOR] " << proc.name << " lost. Restarting...\n";
+                    proc.pid = start_process(proc.name, proc.path);
                 }
+            } else {
+                proc.pid = start_process(proc.name, proc.path);
             }
         }
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(std::chrono::seconds(3));
     }
 
-    std::lock_guard<std::mutex> lock(proc_mutex);
-    for (auto& p : processes) {
-        if (p.pid > 0) {
-            std::cout << "[SUPERVISOR] Killing " << p.name << " (PID " << p.pid << ")...\n";
-            kill(p.pid, SIGTERM);
-            int status;
-            waitpid(p.pid, &status, 0);
+    std::cout << "[SUPERVISOR] All processes terminating...\n";
+    for (auto& proc : processes) {
+        if (proc.pid > 0) {
+            kill(proc.pid, SIGTERM);
         }
     }
-    std::cout << "[SUPERVISOR] All processes terminated.\n";
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    for (auto& proc : processes) {
+        if (proc.pid > 0) {
+            int status;
+            pid_t result = waitpid(proc.pid, &status, WNOHANG);
+            if (result == 0) {
+                kill(proc.pid, SIGKILL);
+            }
+        }
+    }
+    std::cout << "[SUPERVISOR] Shutdown complete.\n";
 }
 
 int main() {
     std::signal(SIGINT, signal_handler);
     std::signal(SIGTERM, signal_handler);
 
-    std::cout << "\033[1;32m";
     std::cout << "╔══════════════════════════════════════════════════════════╗\n";
     std::cout << "║  🛡️ PROTEUS SUPERVISOR — PROCESS LIFECYCLE MANAGER        ║\n";
     std::cout << "║  \"The shepherd. The watcher. The hand that restarts.\"     ║\n";
-    std::cout << "╚══════════════════════════════════════════════════════════╝\n";
-    std::cout << "\033[0m\n";
+    std::cout << "╚══════════════════════════════════════════════════════════╝\n\n";
 
-    // Verify binaries exist
-    auto check = [](const std::string& path) {
-        if (access(path.c_str(), X_OK) != 0) {
-            std::cerr << "[SUPERVISOR] WARNING: " << path << " not found or not executable\n";
-            return false;
+    std::vector<std::string> names = {"pk_heartbeat", "pk_zayden", "zayden_ultimate"};
+    for (const auto& name : names) {
+        std::string path = find_binary(name);
+        Process p;
+        p.name = name;
+        p.path = path;
+        p.pid = -1;
+        p.enabled = true;
+        if (path.empty()) {
+            std::cout << "[SUPERVISOR] WARNING: " << name << " not found or not executable\n";
+            p.enabled = false;
+        } else {
+            std::cout << "[SUPERVISOR] Found " << name << " at " << path << "\n";
         }
-        return true;
-    };
-
-    if (check("./heartbeat_secure")) {
-        processes.push_back({"Ghost", "./heartbeat_secure", {}, -1, 0, {}});
-    }
-    if (check("./zayden_gorf")) {
-        processes.push_back({"Zayden", "./zayden_gorf", {}, -1, 0, {}});
+        processes.push_back(p);
     }
 
-    for (auto& p : processes) {
-        p.pid = spawn(p.binary, p.args);
-        p.last_start = std::chrono::steady_clock::now();
-        std::cout << "[SUPERVISOR] Started " << p.name << " (PID " << p.pid << ")\n";
-    }
-
-    std::cout << "[SUPERVISOR] Monitoring " << processes.size() << " processes\n";
+    int enabled_count = 0;
+    for (const auto& p : processes) if (p.enabled) enabled_count++;
+    std::cout << "[SUPERVISOR] Monitoring " << enabled_count << " processes\n";
     std::cout << "[SUPERVISOR] Press Ctrl+C to shutdown gracefully\n\n";
 
-    monitor();
-
-    std::cout << "[SUPERVISOR] Shutdown complete.\n";
+    monitor_loop();
     return 0;
 }
+

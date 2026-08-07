@@ -14,9 +14,18 @@
 #include <random>
 #include <sstream>
 #include <iomanip>
+#include <csignal>
+#include <atomic>
 
 #define PORT 9161
 #define BUFFER_SIZE 1024
+
+std::atomic<bool> g_running(true);
+
+void signal_handler(int sig) {
+    std::cout << "\n[HEARTBEAT] Caught signal " << sig << ". Shutting down...\n";
+    g_running = false;
+}
 
 class Heartbeat {
 private:
@@ -26,11 +35,18 @@ private:
     int cycle;
     double psi;
     std::mt19937 rng;
-    std::string getLocalIP() { return "100.122.170.28"; }
+    std::string getLocalIP() { return "127.0.0.1"; }
 public:
     Heartbeat() : cycle(0), psi(0.0), rng(std::random_device{}()) {
         sockfd = socket(AF_INET, SOCK_DGRAM, 0);
         if (sockfd < 0) { perror("socket"); exit(1); }
+
+        int reuse = 1;
+        setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &reuse, sizeof(reuse));
+#ifdef SO_REUSEPORT
+        setsockopt(sockfd, SOL_SOCKET, SO_REUSEPORT, &reuse, sizeof(reuse));
+#endif
+
         memset(&server_addr, 0, sizeof(server_addr));
         server_addr.sin_family = AF_INET;
         server_addr.sin_addr.s_addr = INADDR_ANY;
@@ -41,19 +57,26 @@ public:
         client_len = sizeof(client_addr);
         std::cout << "[INIT] Heartbeat on " << getLocalIP() << ":" << PORT << "\n";
     }
-    double computePsi(int cycle) {
+
+    ~Heartbeat() {
+        if (sockfd >= 0) close(sockfd);
+    }
+
+    double computePsi(int cycle_val) {
         double base = 0.863853;
-        double noise = (rng() % 1000 - 500) / 1000000.0;
+        double noise = (static_cast<long long>(rng() % 1000) - 500) / 1000000.0;
         return base + noise;
     }
+
     std::string generatePulse() {
         cycle++;
         psi = computePsi(cycle);
         std::ostringstream oss;
-        oss << "[CYCLE " << cycle << "] Ghost pulses. Ψ=" 
+        oss << "[CYCLE " << cycle << "] Ghost pulses. Ψ="
             << std::fixed << std::setprecision(4) << (psi * 100) << "%";
         return oss.str();
     }
+
     void broadcastLoop() {
         struct sockaddr_in broadcast_so;
         memset(&broadcast_so, 0, sizeof(broadcast_so));
@@ -62,19 +85,25 @@ public:
         broadcast_so.sin_port = htons(PORT);
         int broadcast_enable = 1;
         setsockopt(sockfd, SOL_SOCKET, SO_BROADCAST, &broadcast_enable, sizeof(broadcast_enable));
-        while (true) {
+
+        while (g_running) {
             std::string pulse = generatePulse();
-            sendto(sockfd, pulse.c_str(), pulse.length(), MSG_CONFIRM,
+            sendto(sockfd, pulse.c_str(), pulse.length(), 0,
                    (struct sockaddr*)&broadcast_so, sizeof(broadcast_so));
             std::cout << pulse << std::endl;
             std::this_thread::sleep_for(std::chrono::seconds(9));
         }
     }
+
     void receiveLoop() {
         char buffer[BUFFER_SIZE];
-        while (true) {
-            int n = recvfrom(sockfd, buffer, BUFFER_SIZE, MSG_WAITALL,
+        while (g_running) {
+            int n = recvfrom(sockfd, buffer, BUFFER_SIZE - 1, 0,
                              (struct sockaddr*)&client_addr, &client_len);
+            if (n < 0) {
+                if (!g_running) break;
+                continue;
+            }
             buffer[n] = '\0';
             std::cout << "[RECV] " << buffer << std::endl;
         }
@@ -92,10 +121,16 @@ int main(int argc, char* argv[]) {
     std::cout << "║  © 2026 Fernando De Jesus Garcia Gonzalez (Architect)   ║\n";
     std::cout << "║  Commercial Use requires 30% royalty – see LICENSE       ║\n";
     std::cout << "╚══════════════════════════════════════════════════════════╝\n";
+
+    std::signal(SIGINT, signal_handler);
+    std::signal(SIGTERM, signal_handler);
+
     Heartbeat hb;
     std::thread broadcaster(&Heartbeat::broadcastLoop, &hb);
     std::thread receiver(&Heartbeat::receiveLoop, &hb);
     broadcaster.join();
     receiver.join();
+    std::cout << "[HEARTBEAT] Graceful shutdown complete.\n";
     return 0;
 }
+

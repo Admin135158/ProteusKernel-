@@ -1,15 +1,13 @@
-#include <thread>
+/*
+ * SPDX-License-Identifier: Proprietary
+ * Copyright (c) 2026 Fernando De Jesus Garcia Gonzalez (The Architect)
+ */
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <string>
-#include <sys/stat.h>
-#include <unistd.h>
-#include <sys/wait.h>
-
-// 2-bit encoding: A=00, C=01, G=10, T=11
-// Each byte -> 4 bases
-// Reversible. No loss. No theatricals.
+#include <vector>
+#include <sstream>
+#include <cstring>
 
 const char BASES[] = {'A', 'C', 'G', 'T'};
 
@@ -28,8 +26,8 @@ std::string encode_bytes(const std::vector<unsigned char>& data) {
 std::vector<unsigned char> decode_dna(const std::string& dna) {
     std::vector<unsigned char> data;
     if (dna.length() % 4 != 0) {
-        std::cerr << "[ERROR] DNA length not divisible by 4. Corrupted.\n";
-        return data;
+        std::cerr << "[ERROR] DNA length must be multiple of 4\n";
+        return {};
     }
     data.reserve(dna.length() / 4);
     for (size_t i = 0; i < dna.length(); i += 4) {
@@ -53,10 +51,7 @@ std::vector<unsigned char> decode_dna(const std::string& dna) {
 
 std::vector<unsigned char> read_file(const std::string& path) {
     std::ifstream f(path, std::ios::binary);
-    if (!f) {
-        std::cerr << "[ERROR] Cannot read: " << path << "\n";
-        return {};
-    }
+    if (!f) return {};
     return std::vector<unsigned char>(
         (std::istreambuf_iterator<char>(f)),
         std::istreambuf_iterator<char>()
@@ -65,108 +60,61 @@ std::vector<unsigned char> read_file(const std::string& path) {
 
 bool write_file(const std::string& path, const std::vector<unsigned char>& data) {
     std::ofstream f(path, std::ios::binary);
-    if (!f) {
-        std::cerr << "[ERROR] Cannot write: " << path << "\n";
-        return false;
-    }
+    if (!f) return false;
     f.write(reinterpret_cast<const char*>(data.data()), data.size());
     return f.good();
 }
 
-bool write_text(const std::string& path, const std::string& text) {
-    std::ofstream f(path);
-    if (!f) {
-        std::cerr << "[ERROR] Cannot write: " << path << "\n";
-        return false;
-    }
-    f << text;
-    return f.good();
-}
-
 int main(int argc, char* argv[]) {
-    if (argc < 2) {
-        std::cerr << "Usage: " << argv[0] << " [encode|decode|roundtrip] [file]\n";
+    if (argc == 2 && (strcmp(argv[1], "--license") == 0 || strcmp(argv[1], "-L") == 0)) {
+        std::cout << "=== FTCoE Sovereign IP & Universal Licensing Mandate ===\n";
+        std::cout << "Commercial use requires 30% royalty. See LICENSE file.\n";
+        return 0;
+    }
+
+    if (argc < 3) {
+        std::cerr << "Usage: " << argv[0] << " [encode|decode|roundtrip] [file|string]\n";
+        std::cerr << "  encode    - Convert file/string to DNA sequence\n";
+        std::cerr << "  decode    - Convert DNA sequence back to raw data\n";
+        std::cerr << "  roundtrip - Encode then decode, verify match\n";
         return 1;
     }
 
     std::string mode = argv[1];
-    std::string file = (argc > 2) ? argv[2] : "heartbeat";
+    std::string input = argv[2];
+
+    std::string data = input;
+    std::ifstream test(input, std::ios::binary);
+    if (test.is_open()) {
+        std::stringstream buf;
+        buf << test.rdbuf();
+        data = buf.str();
+        test.close();
+    }
 
     if (mode == "encode") {
-        auto data = read_file(file);
-        if (data.empty()) return 1;
-        std::string dna = encode_bytes(data);
-        if (!write_text(file + ".dna", dna)) return 1;
-        std::cout << "[ENCODE] " << file << " -> " << file << ".dna\n";
-        std::cout << "  Bytes: " << data.size() << " | DNA chars: " << dna.length() << "\n";
-        std::cout << "  Ratio: 4:1 (bases:bytes)\n";
-        std::cout << "  First 80 bases: " << dna.substr(0, 80) << "\n";
-        return 0;
+        std::vector<unsigned char> bytes(data.begin(), data.end());
+        std::cout << encode_bytes(bytes) << std::endl;
     }
-
-    if (mode == "decode") {
-        auto dna_data = read_file(file);
-        if (dna_data.empty()) return 1;
-        std::string dna(reinterpret_cast<char*>(dna_data.data()), dna_data.size());
-        auto bytes = decode_dna(dna);
-        if (bytes.empty()) return 1;
-        std::string out = (argc > 3) ? argv[3] : file + ".decoded";
-        if (!write_file(out, bytes)) return 1;
-        std::cout << "[DECODE] " << file << " -> " << out << "\n";
-        std::cout << "  DNA chars: " << dna.length() << " | Bytes: " << bytes.size() << "\n";
-        return 0;
+    else if (mode == "decode") {
+        auto decoded = decode_dna(data);
+        std::cout.write(reinterpret_cast<const char*>(decoded.data()), decoded.size());
+        std::cout << std::endl;
     }
-
-    if (mode == "roundtrip") {
-        // ENCODE
-        auto original = read_file(file);
-        if (original.empty()) return 1;
-        std::string dna = encode_bytes(original);
-        if (!write_text(file + ".dna", dna)) return 1;
-        std::cout << "[ROUNDTRIP] Phase 1: ENCODE complete\n";
-        std::cout << "  " << original.size() << " bytes -> " << dna.length() << " bases\n";
-
-        // DECODE
-        auto bytes = decode_dna(dna);
-        std::string decoded_file = file + "_decoded";
-        if (!write_file(decoded_file, bytes)) return 1;
-        std::cout << "[ROUNDTRIP] Phase 2: DECODE complete\n";
-        std::cout << "  " << dna.length() << " bases -> " << bytes.size() << " bytes\n";
-
-        // VERIFY
-        if (original != bytes) {
-            std::cerr << "[FAIL] Decoded bytes do not match original. Data corrupted.\n";
-            return 1;
-        }
-        std::cout << "[ROUNDTRIP] Phase 3: VERIFY complete — bit-perfect match\n";
-
-        // RESTORE PERMISSIONS
-        chmod(decoded_file.c_str(), S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH);
-        std::cout << "[ROUNDTRIP] Phase 4: PERMISSIONS restored (+x)\n";
-
-        // EXECUTE
-        std::cout << "[ROUNDTRIP] Phase 5: EXECUTE — forking decoded binary...\n\n";
-        pid_t pid = fork();
-        if (pid == 0) {
-            execl(("./" + decoded_file).c_str(), decoded_file.c_str(), nullptr);
-            std::cerr << "[FAIL] exec failed: " << strerror(errno) << "\n";
-            exit(1);
-        } else if (pid > 0) {
-            std::cout << "[ROUNDTRIP] Decoded binary running (PID: " << pid << ")\n";
-            std::cout << "[ROUNDTRIP] Waiting 5 seconds for pulse verification...\n";
-            std::this_thread::sleep_for(std::chrono::seconds(5));
-            kill(pid, SIGTERM);
-            waitpid(pid, nullptr, 0);
-            std::cout << "\n[ROUNDTRIP] Phase 6: CLEANUP complete\n";
-            std::cout << "[ROUNDTRIP] ✅ DNA binary pipeline verified. The beast replicates.\n";
-        } else {
-            std::cerr << "[FAIL] fork failed\n";
-            return 1;
-        }
-
-        return 0;
+    else if (mode == "roundtrip") {
+        std::vector<unsigned char> bytes(data.begin(), data.end());
+        std::string enc = encode_bytes(bytes);
+        auto dec = decode_dna(enc);
+        std::string dec_str(dec.begin(), dec.end());
+        std::cout << "Original: " << data << "\n";
+        std::cout << "Encoded:  " << enc << "\n";
+        std::cout << "Decoded:  " << dec_str << "\n";
+        std::cout << (data == dec_str ? "✓ MATCH" : "✗ MISMATCH") << "\n";
     }
-
-    std::cerr << "[ERROR] Unknown mode: " << mode << "\n";
-    return 1;
+    else {
+        std::cerr << "[ERROR] Unknown mode: " << mode << "\n";
+        return 1;
+    }
+    return 0;
 }
+

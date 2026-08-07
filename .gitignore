@@ -1,66 +1,46 @@
-# === Build artifacts ===
+# Compiled Binaries & Executables
+bin/
 *.o
-*.obj
-*.out
-*.exe
-*.bin
 *.so
-*.dll
-*.dylib
-build/
-cmake-build-*/
-dist/
-
-# === Proteus binaries ===
-proteus_child_*
-proteus_fixed
-proteus_final
-proteus_master
-proteus_kernel
-proteus_kernel_bin
-proteus_kernel_complete
+*.exe
 proteus_engine_v7
-mutated
-
-# === Zayden binaries ===
-zayden_ultimate
-zayden_gorf
-zayden_council
-zayden_working
-zayden_final
-zayden_local
-zayden_hf
-zayden_free
-
-# === Mesh / P2P binaries ===
-heartbeat
+proteus_v5_1
+proteus_kernel_bin
+proteus_final
+proteus_fixed
+proteus_master
 heartbeat_replicant
-heartbeat_broadcast
 heartbeat_secure
-heartbeat_decoded
-heartbeat_multicast
+state_sync
+state_sync_fast
+shard_dna
+dna_binary
+mutated
+hello
+rish
+agent
+supervisor
 swarm
 swarm_push
 cpp_push
-
-# === Bio / Gate / Remote ===
-agent
-dna_encode
-gatekeeper
-supervisor
+zayden_gorff
+zayden_ultimate
 remote_control
 
-# === Runtime / Secrets ===
-*.log
-*.dna
-*.state
+# Local Environment & Secrets
+.android/
+.config/
+.ssh/
 node_secret.bin
-shard.dna
-.env
-*.key
-*.pem
+config/node_secret.bin
+*.bin
 
-# === Dirs ===
-downloads/
-storage/
-.cache/
+# Runtime Logs & Generated Memory/DNA States
+*.log
+logs/
+zayden_memory.txt
+*.dna
+proteus_mesh.state
+state.json
+.bash_history
+.wget-hsts

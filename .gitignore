@@ -1,4 +1,4 @@
-# Binaries
+# Compiled binaries
 *.o
 *.out
 dna_binary
@@ -9,10 +9,11 @@ mesh/heartbeat
 zayden_gorf
 heartbeat_secure
 
-# Backups
+# Backups & logs
 backup_*
 *.bak
-
-# Termux / build artifacts
 *.log
 *.tmp
+
+# Termux
+*.deb

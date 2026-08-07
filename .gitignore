@@ -1,46 +1,18 @@
-# Compiled Binaries & Executables
-bin/
-*.o
-*.so
-*.exe
-proteus_engine_v7
-proteus_v5_1
-proteus_kernel_bin
-proteus_final
-proteus_fixed
-proteus_master
-heartbeat_replicant
-heartbeat_secure
-state_sync
-state_sync_fast
-shard_dna
-dna_binary
-mutated
-hello
-rish
-agent
-supervisor
-swarm
-swarm_push
-cpp_push
-zayden_gorff
-zayden_ultimate
-remote_control
-
-# Local Environment & Secrets
-.android/
-.config/
-.ssh/
-node_secret.bin
-config/node_secret.bin
-*.bin
-
-# Runtime Logs & Generated Memory/DNA States
+# Logs & Shell History
 *.log
-logs/
-zayden_memory.txt
-*.dna
-proteus_mesh.state
-state.json
 .bash_history
 .wget-hsts
+
+# Binaries & Compiled Executables
+*.bin
+*.o
+*.so
+dna_binary
+heartbeat
+node_secret.bin
+proteus_child_*
+
+# State & Cache
+downloads/
+node_modules/
+.cache/

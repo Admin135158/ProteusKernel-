@@ -1,19 +1,76 @@
-# Compiled binaries
+# === Build artifacts ===
 *.o
+*.obj
 *.out
+*.exe
+*.bin
+*.so
+*.dll
+*.dylib
+build/
+cmake-build-*/
+dist/
+
+# === Binaries ===
+proteus_child_*
+proteus_fixed
+proteus_final
+proteus_master
+proteus_kernel
+proteus_kernel_bin
+proteus_kernel_complete
+proteus_engine_v7
+proteus_v5_1
+proteus_engine
+PROTEUS_ENGINE_V7
+pk_zayden
+mutated
+hello
+rish
 dna_binary
-consensus_test
-zayden_full
-gate/supervisor
-mesh/heartbeat
+shard_dna
+state_sync
+state_sync_fast
+json_sync
+cpp_push
+heartbeat
+heartbeat_*
+swarm
+swarm_push
+agent
+gatekeeper
+supervisor
+remote_control
+zayden_ultimate
 zayden_gorf
-heartbeat_secure
 
-# Backups & logs
-backup_*
-*.bak
+# === Logs ===
 *.log
-*.tmp
 
-# Termux
-*.deb
+# === Secrets / Runtime ===
+*.state
+node_secret.bin
+shard.dna
+.env
+*.key
+*.pem
+received_*
+
+# === Media ===
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# === Dirs ===
+downloads/
+storage/
+.cache/
+build/
+biological/
+network/
+
+# === ElMalo runtime ===
+__pycache__/
+*.pyc
+.pytest_cache/

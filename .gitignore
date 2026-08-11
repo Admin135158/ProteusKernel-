@@ -17,3 +17,14 @@ backup_*
 
 # Termux
 *.deb
+
+# SECURITY — NEVER COMMIT
+.ssh/
+.bash_history
+.config/
+.env
+*.key
+*.pem
+id_*
+known_hosts
+.git-credentials

@@ -1,30 +1,14 @@
-# Compiled binaries
-*.o
-*.out
-dna_binary
-consensus_test
-zayden_full
-gate/supervisor
-mesh/heartbeat
-zayden_gorf
-heartbeat_secure
-
-# Backups & logs
-backup_*
-*.bak
-*.log
-*.tmp
-
-# Termux
-*.deb
-
-# SECURITY — NEVER COMMIT
+# Sensitive
 .ssh/
 .bash_history
-.config/
-.env
 *.key
 *.pem
 id_*
-known_hosts
-.git-credentials
+
+# Build/runtime
+*.log
+*.dna
+*.state
+node_secret.bin
+proteus_child_*
+build/

@@ -1,14 +1,50 @@
-# Sensitive
-.ssh/
-.bash_history
+# Compiled binaries (keep them out!)
+bin/
+*.o
+*.exe
+*.out
+*.a
+*.so
+*.dylib
+
+# Secrets
+node_secret.bin
+.secrets/
 *.key
 *.pem
-id_*
+*.crt
+.env
+*.secret
 
-# Build/runtime
-*.log
+# Runtime state
 *.dna
 *.state
-node_secret.bin
-proteus_child_*
+*.log
+*.tmp
+*.bak
+*.pid
+*.db
+*.sqlite
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Build artifacts
 build/
+obj/
+lib/
+
+# Misc
+*.tar.gz
+*.zip
+*.deb

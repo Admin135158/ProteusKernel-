@@ -1,56 +1,31 @@
-# ProteusKernel Makefile
+# SPDX-License-Identifier: Proprietary
+# Copyright (c) 2026 Fernando De Jesus Garcia Gonzalez (The Architect)
+
 CXX = g++
-CXXFLAGS = -std=c++17 -O2 -Wall -Wextra -pthread
-LDFLAGS = -lcrypto -lcurl
+CXXFLAGS = -std=c++17 -Wall -O2 -I$(PREFIX)/include
+LDFLAGS = -L$(PREFIX)/lib -lssl -lcrypto -pthread
 
-BUILD_DIR = build
+SRCDIR = src
+TARGETS = pk_heartbeat pk_zayden pk_gotem pk_swarm pk_push
 
-TARGETS = $(BUILD_DIR)/dna_binary \
-            $(BUILD_DIR)/pk_zayden \
-            $(BUILD_DIR)/pk_heartbeat \
-            $(BUILD_DIR)/zayden_ultimate \
-            $(BUILD_DIR)/heartbeat \
-            $(BUILD_DIR)/supervisor
+all: $(TARGETS)
 
-.PHONY: all clean dirs symlinks
+pk_heartbeat: $(SRCDIR)/pk_heartbeat.cpp
+$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
-all: dirs $(TARGETS) symlinks
+pk_zayden: $(SRCDIR)/pk_zayden.cpp
+$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
-dirs:
-	@mkdir -p $(BUILD_DIR)
+pk_gotem: $(SRCDIR)/pk_gotem.cpp
+$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
-symlinks: $(TARGETS)
-	@ln -sf pk_zayden $(BUILD_DIR)/consensus_test 2>/dev/null || true
-	@ln -sf pk_heartbeat $(BUILD_DIR)/heartbeat_secure 2>/dev/null || true
-	@ln -sf zayden_ultimate $(BUILD_DIR)/zayden_full 2>/dev/null || true
-	@echo "Symlinks created"
+pk_swarm: $(SRCDIR)/pk_swarm.cpp
+$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
-$(BUILD_DIR)/dna_binary: dna_binary.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $<
-
-$(BUILD_DIR)/pk_zayden: src/pk_zayden.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $<
-
-$(BUILD_DIR)/pk_heartbeat: src/pk_heartbeat.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $<
-
-$(BUILD_DIR)/zayden_ultimate: zayden_ultimate.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $< -lpthread
-
-$(BUILD_DIR)/heartbeat: mesh/heartbeat.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $< -lpthread
-
-$(BUILD_DIR)/supervisor: gate/supervisor.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $< -lpthread
+pk_push: $(SRCDIR)/pk_push.cpp
+$(CXX) $(CXXFLAGS) -o $@ $<
 
 clean:
-	rm -rf $(BUILD_DIR)
-	@echo "Clean complete"
+rm -f $(TARGETS) *.o
 
-stop:
-	-pkill -f pk_zayden
-	-pkill -f pk_heartbeat
-	-pkill -f zayden_ultimate
-	-pkill -f supervisor
-	@echo "All Proteus processes stopped"
-
+.PHONY: all clean

@@ -101,3 +101,18 @@ Current Status
 ---
 
 © 2026 Morpheus Innovations & Technologies Holdings Llc
+
+## 🧮 Mathematical Foundation
+
+ProteusKernel implements the **Garcia–González Cognitive Engine (GGSE)** and the **Geometric Ollin Resonance Framework (GORF)**.
+
+### Core Equations Implemented
+
+| **Equation** | **Implementation** |
+|--------------|-------------------|
+| $$\frac{dC}{dt} = \alpha \cdot F(t) \cdot (1 - \frac{C}{C_{\max}}) - \beta \cdot C$$ | Consciousness tracking in `pk_swarm.cpp` |
+| $$\mathbf{S}(t) = \mathbf{M}(\theta) \cdot \mathbf{S}(t-1) \cdot \frac{\phi}{\pi}$$ | Reality state in `pk_zayden.cpp` |
+| Truce Protocol | Multi-agent negotiation based on reputation and HOLO proofs |
+
+For the full theory, see the [FTCE Theory Repo](https://github.com/Admin135158/The-Fundamental-Theory-of-Conscious-Energy-FTCE-Theory-Registration).
+

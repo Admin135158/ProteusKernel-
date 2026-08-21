@@ -53,3 +53,10 @@ Version History
 ---
 
 © 2026 Morpheus Innovations & Technologies Holdings LLC
+
+## 🤝 Contributors
+
+- **[Admin135158](https://github.com/Admin135158)** – Founder, Lead Architect (ProteusKernel, SYNC‑7, Digital Bodyguard, ElMalo)
+- **[Deathburgerz013](https://github.com/Deathburgerz013)** – Creator of the **HOLO‑Invariant** continuity engine (append‑only logs, Merkle verification, tamper‑evident state)
+
+For a full list, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).

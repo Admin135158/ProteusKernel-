@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ProteusKernel – Multi‑Agent Coordination Engine
 
 **Owner:** Morpheus Innovations & Technologies Holdings LLC  
@@ -100,6 +100,4 @@ Current Status
 
 ---
 
-© 2026 Morpheus Innovations & Technologies Holdings LLC
-=======
->>>>>>> 4fadc4b08dbf4949a2a87c880aac9e28e8799761
+© 2026 Morpheus Innovations & Technologies Holdings Llc

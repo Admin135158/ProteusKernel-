@@ -60,3 +60,15 @@ Version History
 - **[Deathburgerz013](https://github.com/Deathburgerz013)** – Creator of the **HOLO‑Invariant** continuity engine (append‑only logs, Merkle verification, tamper‑evident state)
 
 For a full list, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).
+
+## 🔗 Community & Documentation
+
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+- [Contributing Guidelines](./CONTRIBUTING.md)
+- [Security Policy](./SECURITY.md)
+- [Roadmap](./ROADMAP.md)
+- [Changelog](./CHANGELOG.md)
+- [Issue Tracker](https://github.com/Admin135158/ProteusKernel-/issues)
+- [Discussions](https://github.com/Admin135158/ProteusKernel-/discussions)
+
+© 2026 Morpheus Innovations & Technologies Holdings LLC

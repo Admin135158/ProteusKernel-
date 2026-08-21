@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ProteusKernel – Multi‑Agent Coordination Engine
 
 **Owner:** Morpheus Innovations & Technologies Holdings LLC  

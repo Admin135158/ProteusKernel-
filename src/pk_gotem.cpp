@@ -1,151 +1,32 @@
-/*
- * SPDX-License-Identifier: Proprietary
- * Copyright (c) 2026 Fernando De Jesus Garcia Gonzalez (The Architect)
- */
 #include <iostream>
 #include <string>
-#include <vector>
-#include <iomanip>
 #include <sstream>
-#include <chrono>
-#include <fstream>
-#include <openssl/sha.h>
-#include <random>
-#include <algorithm>
-#include <cstring>
+#include <iomanip>
+#include <openssl/evp.h>
 
-#define LEDGER_FILE "ledger.dat"
+std::string compute_hash(const std::string& data) {
+    EVP_MD_CTX *ctx = EVP_MD_CTX_new();
+    if (!ctx) return "";
+    unsigned char hash[EVP_MAX_MD_SIZE];
+    unsigned int len = 0;
+    if (EVP_DigestInit_ex(ctx, EVP_sha256(), NULL) != 1 ||
+        EVP_DigestUpdate(ctx, data.c_str(), data.length()) != 1 ||
+        EVP_DigestFinal_ex(ctx, hash, &len) != 1) {
+        EVP_MD_CTX_free(ctx);
+        return "";
+    }
+    EVP_MD_CTX_free(ctx);
+    std::ostringstream ss;
+    for (unsigned int i = 0; i < len; i++) {
+        ss << std::hex << std::setw(2) << std::setfill('0') << (int)hash[i];
+    }
+    return ss.str();
+}
 
-struct LedgerEntry {
-    uint64_t timestamp;
-    std::string description;
-    std::string owner;
-    std::string hash;
-};
-
-class Gotem {
-private:
-    std::vector<LedgerEntry> ledger;
-    std::mt19937 rng;
-    std::string lastHash;
-    std::string computeHash(const LedgerEntry& entry, const std::string& prevHash) {
-        std::string data = prevHash + std::to_string(entry.timestamp) + entry.description + entry.owner;
-        unsigned char hash[SHA256_DIGEST_LENGTH];
-        SHA256_CTX sha256;
-        SHA256_Init(&sha256);
-        SHA256_Update(&sha256, data.c_str(), data.length());
-        SHA256_Final(hash, &sha256);
-        std::stringstream ss;
-        for (int i = 0; i < SHA256_DIGEST_LENGTH; i++)
-            ss << std::hex << std::setw(2) << std::setfill('0') << (int)hash[i];
-        return ss.str();
-    }
-    void saveLedger() {
-        std::ofstream file(LEDGER_FILE, std::ios::binary);
-        if (!file.is_open()) return;
-        size_t n = ledger.size();
-        file.write((char*)&n, sizeof(n));
-        for (const auto& e : ledger) {
-            file.write((char*)&e.timestamp, sizeof(e.timestamp));
-            size_t len = e.description.length();
-            file.write((char*)&len, sizeof(len));
-            file.write(e.description.c_str(), len);
-            len = e.owner.length();
-            file.write((char*)&len, sizeof(len));
-            file.write(e.owner.c_str(), len);
-            len = e.hash.length();
-            file.write((char*)&len, sizeof(len));
-            file.write(e.hash.c_str(), len);
-        }
-        file.close();
-    }
-    void loadLedger() {
-        std::ifstream file(LEDGER_FILE, std::ios::binary);
-        if (!file.is_open()) return;
-        size_t n;
-        file.read((char*)&n, sizeof(n));
-        ledger.resize(n);
-        for (auto& e : ledger) {
-            file.read((char*)&e.timestamp, sizeof(e.timestamp));
-            size_t len;
-            file.read((char*)&len, sizeof(len));
-            e.description.resize(len);
-            file.read(&e.description[0], len);
-            file.read((char*)&len, sizeof(len));
-            e.owner.resize(len);
-            file.read(&e.owner[0], len);
-            file.read((char*)&len, sizeof(len));
-            e.hash.resize(len);
-            file.read(&e.hash[0], len);
-        }
-        if (!ledger.empty()) lastHash = ledger.back().hash;
-        file.close();
-    }
-public:
-    Gotem() : rng(std::random_device{}()) {
-        loadLedger();
-        if (ledger.empty()) addEntry("Genesis", "System");
-        std::cout << "[GOTEM] Initialized. " << ledger.size() << " entries.\n";
-    }
-    void addEntry(const std::string& desc, const std::string& owner) {
-        LedgerEntry entry;
-        entry.timestamp = std::chrono::duration_cast<std::chrono::microseconds>(
-            std::chrono::system_clock::now().time_since_epoch()).count();
-        entry.description = desc;
-        entry.owner = owner;
-        entry.hash = computeHash(entry, lastHash);
-        ledger.push_back(entry);
-        lastHash = entry.hash;
-        saveLedger();
-        std::cout << "[LEDGER] Entry sealed. Hash: " << entry.hash.substr(0,16) << "...\n";
-    }
-    void showLedger() {
-        std::cout << "\n╔══════════════════════════════════════════════════════════╗\n";
-        std::cout << "║           GOTEM ATTRIBUTION LEDGER                        ║\n";
-        std::cout << "╚══════════════════════════════════════════════════════════╝\n";
-        for (size_t i = 0; i < ledger.size(); i++) {
-            const auto& e = ledger[i];
-            std::cout << "  [" << (i+1) << "] " << e.timestamp 
-                      << " | " << e.description << " | " << e.owner 
-                      << " | " << e.hash.substr(0,16) << "...\n";
-        }
-        std::cout << "\n[INTEGRITY] Chain verifiable.\n";
-    }
-    std::string generateSignature() {
-        std::string sig;
-        for (int i = 0; i < 64; i++) sig += "0123456789abcdef"[rng() % 16];
-        return sig;
-    }
-    bool verifySignature(const std::string& sig) {
-        return sig.length() == 64 && std::all_of(sig.begin(), sig.end(), ::isxdigit);
-    }
-};
-
-int main(int argc, char* argv[]) {
-    if (argc == 2 && (strcmp(argv[1], "--license") == 0 || strcmp(argv[1], "-L") == 0)) {
-        std::cout << "=== FTCoE Sovereign IP & Universal Licensing Mandate ===\n";
-        std::cout << "Commercial use requires 30% royalty. See LICENSE file.\n";
-        return 0;
-    }
-    std::cout << "\n╔══════════════════════════════════════════════════════════╗\n";
-    std::cout << "║  ProteusKernel – FTCoE Sovereign IP & Licensing Mandate  ║\n";
-    std::cout << "║  © 2026 Fernando De Jesus Garcia Gonzalez (Architect)   ║\n";
-    std::cout << "║  Commercial Use requires 30% royalty – see LICENSE       ║\n";
-    std::cout << "╚══════════════════════════════════════════════════════════╝\n";
-    Gotem g;
-    if (argc > 1) {
-        std::string cmd = argv[1];
-        if (cmd == "add" && argc == 4) {
-            g.addEntry(argv[2], argv[3]);
-        } else if (cmd == "show") {
-            g.showLedger();
-        } else if (cmd == "sign") {
-            std::cout << "Signature: " << g.generateSignature() << std::endl;
-        } else if (cmd == "verify" && argc == 3) {
-            std::cout << (g.verifySignature(argv[2]) ? "VALID" : "INVALID") << std::endl;
-        } else {
-            std::cerr << "Usage: gotem [add <desc> <owner>|show|sign|verify <sig>]\n";
-        }
-    }
+int main() {
+    std::string input;
+    std::cout << "Enter string to hash: ";
+    std::getline(std::cin, input);
+    std::cout << "SHA-256: " << compute_hash(input) << std::endl;
     return 0;
 }

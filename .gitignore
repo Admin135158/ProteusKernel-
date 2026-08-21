@@ -1,50 +1,19 @@
-# Compiled binaries (keep them out!)
+# Binaries
 bin/
 *.o
-*.exe
 *.out
-*.a
-*.so
-*.dylib
+*.exe
+src/gate/gatekeeper
+src/mesh/swarm_push
+
+# Dependencies
+node_modules/
+
+# Legacy
+src/legacy/
 
 # Secrets
-node_secret.bin
-.secrets/
+.env
+.env.*
 *.key
 *.pem
-*.crt
-.env
-*.secret
-
-# Runtime state
-*.dna
-*.state
-*.log
-*.tmp
-*.bak
-*.pid
-*.db
-*.sqlite
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-
-# IDE / OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-
-# Build artifacts
-build/
-obj/
-lib/
-
-# Misc
-*.tar.gz
-*.zip
-*.deb

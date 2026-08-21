@@ -23,9 +23,9 @@ pk_swarm: $(SRCDIR)/pk_swarm.cpp
 $(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 pk_push: $(SRCDIR)/pk_push.cpp
-$(CXX) $(CXXFLAGS) -o $@ $<
+$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 clean:
-rm -f $(TARGETS) *.o
+rm -f $(TARGETS)
 
 .PHONY: all clean

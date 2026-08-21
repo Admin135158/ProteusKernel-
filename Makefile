@@ -11,21 +11,21 @@ TARGETS = pk_heartbeat pk_zayden pk_gotem pk_swarm pk_push
 all: $(TARGETS)
 
 pk_heartbeat: $(SRCDIR)/pk_heartbeat.cpp
-$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 pk_zayden: $(SRCDIR)/pk_zayden.cpp
-$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 pk_gotem: $(SRCDIR)/pk_gotem.cpp
-$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 pk_swarm: $(SRCDIR)/pk_swarm.cpp
-$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 pk_push: $(SRCDIR)/pk_push.cpp
-$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 clean:
-rm -f $(TARGETS)
+	rm -f $(TARGETS)
 
 .PHONY: all clean

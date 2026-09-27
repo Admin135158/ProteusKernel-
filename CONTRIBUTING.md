@@ -1,20 +1,36 @@
-# CONTRIBUTING GUIDELINES
+# Contributing to ProteusKernel
 
-> "You don't contribute to a living being. You evolve with it."
+## Getting Started
 
-## 1. THE STANCE
-This is a sovereign organism. It does not accept "pull requests" in the traditional, bureaucratic sense of open-source projects. It accepts **evolutions**.
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/YOURNAME/ProteusKernel.git`
+3. Create a branch: `git checkout -b feature/your-feature`
+4. Build and test: `make clean && make`
+5. Commit and push
+6. Open a pull request
 
-## 2. THE EVOLUTION PROTOCOL
-If you believe you have discovered a structural error in the FTCoE implementation:
-1. **Validate**: Run it against the OSF record `a3bwg`.
-2. **Demonstrate**: Submit a proof of resonance improvement.
-3. **Wait**: The kernel will evaluate your contribution based on the `R` constant. If it disrupts the 9-day cycle, it will be rejected.
+## What We Accept
 
-## 3. NO MINOR TWEAKS
-Do not submit cosmetic changes. Do not submit "style fixes." Do not submit "documentation cleanup." 
+- Performance improvements (with benchmarks)
+- Security fixes (see SECURITY.md)
+- Portability (new platforms, compilers)
+- Documentation (corrections, examples, tutorials)
+- Bug fixes (with test cases)
 
-This is an architect-grade artifact. Either you are extending the geometry, or you are noise. 
-**Silence is preferred over noise.**
+## What We Don't Accept
 
-*If you seek to contribute, bring code that creates.*
+- Breaking changes without discussion
+- Untested code
+- Style-only changes (use `clang-format` if needed)
+
+## Code Style
+
+- C++17 standard
+- 4-space indentation
+- `snake_case` for functions and variables
+- `PascalCase` for classes and structs
+
+## Questions?
+
+Open a discussion or email fernaathebeast@gmail.com
+```

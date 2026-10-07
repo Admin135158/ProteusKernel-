@@ -1,0 +1,33 @@
+import os
+import math
+import random
+import time
+
+class ElMalo:
+    def __init__(self):
+        self.x, self.y, self.z = 0.1, 0.0, 0.0
+
+    def lorenz(self, x, y, z, s=10, r=28, b=2.667):
+        dx = s * (y - x)
+        dy = x * (r - z) - y
+        dz = x * y - b * z
+        return x + dx*0.01, y + dy*0.01, z + dz*0.01
+
+    def entropy(self):
+        t = time.time()
+        jitter = random.random()
+        load = (jitter * t) % 5
+        temp = 30 + (jitter * 20)
+        noise = int.from_bytes(os.urandom(2), "big") % 1000
+        return float(load), float(temp), noise
+
+    def synthesize_state(self):
+        self.x, self.y, self.z = self.lorenz(self.x, self.y, self.z)
+        load, temp, noise = self.entropy()
+
+        psi = {
+            "lorenz": [self.x, self.y, self.z],
+            "entropy": {"load": load, "temp": temp, "noise": noise},
+            "archetype": random.choice(["warrior", "sage", "chaos", "order"])
+        }
+        return psi

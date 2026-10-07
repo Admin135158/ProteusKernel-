@@ -1,0 +1,242 @@
+#!/usr/bin/env python3
+import os, sys, time, json, socket, struct, hmac, hashlib, signal, subprocess
+from pathlib import Path
+from datetime import datetime
+from collections import defaultdict, deque
+
+BASE = Path.home() / 'ProteusKernel'
+PID_DIR = BASE / 'run' / 'pids'
+LOG_DIR = BASE / 'logs' / 'engines'
+AUDIT = BASE / 'logs' / 'audit' / 'supervisor_v2.log'
+SECRET = b'MORPHEUS_DEV_KEY_CHANGE_IN_PRODUCTION'
+
+PID_DIR.mkdir(parents=True, exist_ok=True)
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+AUDIT.parent.mkdir(parents=True, exist_ok=True)
+
+ENGINE_MANIFEST = {
+    'pk_swarm':       {'type': 'cpp', 'bin': 'bin/pk_swarm',       'port': 15001, 'tier': 'core', 'probe': 'morp2'},
+    'pk_heartbeat':   {'type': 'cpp', 'bin': 'bin/pk_heartbeat',   'port': 15002, 'tier': 'core', 'probe': 'morp2'},
+    'gatekeeper':     {'type': 'cpp', 'bin': 'bin/gatekeeper',     'port': 15003, 'tier': 'core', 'probe': 'morp2'},
+    'supervisor':     {'type': 'cpp', 'bin': 'bin/supervisor',     'port': 15004, 'tier': 'core', 'probe': 'morp2'},
+    'bodyguard':      {'type': 'cpp', 'bin': 'bin/bodyguard',      'port': 15005, 'tier': 'core', 'probe': 'morp2'},
+    'swarm_gossip':   {'type': 'cpp', 'bin': 'bin/swarm_gossip',   'port': 15008, 'tier': 'core', 'probe': 'udp'},
+    'pk_zayden':      {'type': 'cpp', 'bin': 'bin/pk_zayden',      'port': 15006, 'tier': 'bridge', 'probe': 'morp2'},
+    'pk_gotem':       {'type': 'cpp', 'bin': 'bin/pk_gotem',       'port': 15007, 'tier': 'bridge', 'probe': 'morp2'},
+    'dna_binary':     {'type': 'cpp', 'bin': 'bin/dna_binary',     'port': 15010, 'tier': 'utility', 'probe': 'morp2'},
+    'zayden_unified': {'type': 'python', 'script': 'zayden_unified.py', 'port': 15009, 'tier': 'bridge', 'probe': 'tcp'},
+    'chaos_engine':   {'type': 'python', 'script': 'chaos_engine.py',   'port': 15011, 'tier': 'elmalo', 'probe': 'tcp'},
+    'kernel_bridge':  {'type': 'python', 'script': 'kernel_bridge.py',  'port': 15012, 'tier': 'elmalo', 'probe': 'tcp'},
+    'arbitration':    {'type': 'python', 'script': 'arbitration.py',    'port': 15013, 'tier': 'elmalo', 'probe': 'tcp'},
+    'initiation':     {'type': 'python', 'script': 'initiation.py',     'port': 15014, 'tier': 'elmalo', 'probe': 'tcp'},
+    'scs_main':       {'type': 'python', 'script': 'scs_main.py',       'port': 15015, 'tier': 'orchestrator', 'probe': 'tcp'},
+}
+
+TIER_ORDER = ['core', 'bridge', 'utility', 'elmalo', 'orchestrator']
+restart_counts = defaultdict(lambda: deque(maxlen=20))
+running = True
+
+def audit(event, detail):
+    line = json.dumps({'ts': datetime.now().isoformat(), 'event': event, 'detail': detail}) + '\n'
+    with open(AUDIT, 'a') as f: f.write(line)
+
+def encode_frame(msg_type, payload=b''):
+    plen = len(payload)
+    header = b'MORP' + struct.pack('>BBBBI', 2, msg_type, 0, 0, plen)
+    dummy = b'\x00' * 32
+    pre = header + dummy + payload
+    sig = hmac.new(SECRET, pre, hashlib.sha256).digest()
+    return header + sig + payload
+
+def decode_frame(data):
+    if len(data) < 44 or data[:4] != b'MORP': return None
+    ver, typ, flags, reserved, plen = struct.unpack('>BBBBI', data[4:12])
+    if len(data) < 44 + plen: return None
+    payload = data[44:44+plen]
+    their_hmac = data[12:44]
+    pre = data[:12] + b'\x00'*32 + payload
+    my_hmac = hmac.new(SECRET, pre, hashlib.sha256).digest()
+    if not hmac.compare_digest(their_hmac, my_hmac): return None
+    return {'version': ver, 'type': typ, 'flags': flags, 'payload': payload}
+
+def probe_morp2(port):
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(2.0)
+        s.connect(('127.0.0.1', port))
+        s.sendall(encode_frame(0x01, b'PROBE'))
+        hdr = b''
+        while len(hdr) < 44:
+            chunk = s.recv(44 - len(hdr))
+            if not chunk: break
+            hdr += chunk
+        if len(hdr) < 44: s.close(); return False
+        plen = struct.unpack('>I', hdr[8:12])[0]
+        payload = b''
+        while len(payload) < plen:
+            chunk = s.recv(plen - len(payload))
+            if not chunk: break
+            payload += chunk
+        s.close()
+        msg = decode_frame(hdr + payload)
+        return msg is not None and msg['type'] == 0x08
+    except:
+        return False
+
+def probe_tcp(port):
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(1.0)
+        s.connect(('127.0.0.1', port))
+        s.close()
+        return True
+    except:
+        return False
+
+def probe_udp(port):
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.settimeout(1.0)
+        s.sendto(b'GOSSIP_PROBE', ('127.0.0.1', port))
+        s.recvfrom(1024)
+        s.close()
+        return True
+    except:
+        return False
+
+def pid_alive(pid):
+    return os.path.exists(f'/proc/{pid}')
+
+def can_restart(name, max_r, window):
+    now = time.time()
+    restart_counts[name].append(now)
+    recent = [t for t in restart_counts[name] if now - t < window]
+    return len(recent) <= max_r
+
+def start_engine(name):
+    meta = ENGINE_MANIFEST[name]
+    pid_file = PID_DIR / f'{name}.pid'
+    if pid_file.exists():
+        try:
+            old = int(pid_file.read_text().strip())
+            if pid_alive(old):
+                print(f'[SKIP] {name} already running (PID {old})')
+                return True
+        except:
+            pass
+    env = os.environ.copy()
+    env['PK_ENGINE'] = name
+    env['PK_PORT'] = str(meta['port'])
+    env['PK_TIER'] = meta['tier']
+    env['PK_BASE_DIR'] = str(BASE)
+    env['PK_SECRET'] = SECRET.decode()
+    log_file = LOG_DIR / f'{name}.log'
+    try:
+        if meta['type'] == 'cpp':
+            cmd = [str(BASE / meta['bin']), '--port', str(meta['port'])]
+        else:
+            cmd = [sys.executable, str(BASE / meta['script']), '--port', str(meta['port'])]
+        proc = subprocess.Popen(cmd, stdout=open(log_file, 'a'), stderr=subprocess.STDOUT,
+                                cwd=str(BASE), env=env, start_new_session=True)
+        pid_file.write_text(str(proc.pid))
+        mode = 'MORP-v2' if meta['probe'] == 'morp2' else 'LEGACY'
+        print(f'[START] {name} -> PID {proc.pid} (port {meta["port"]}) [{mode}]')
+        audit('START', {'engine': name, 'pid': proc.pid, 'port': meta['port'], 'mode': mode})
+        time.sleep(0.3)
+        return True
+    except Exception as e:
+        print(f'[ERROR] {name}: {e}')
+        return False
+
+def stop_engine(name):
+    pid_file = PID_DIR / f'{name}.pid'
+    if pid_file.exists():
+        try:
+            pid = int(pid_file.read_text().strip())
+            if pid_alive(pid):
+                os.kill(pid, signal.SIGTERM)
+                time.sleep(0.5)
+                if pid_alive(pid): os.kill(pid, signal.SIGKILL)
+        except:
+            pass
+        pid_file.unlink()
+    print(f'[STOP] {name}')
+    audit('STOP', {'engine': name})
+
+def stop_all():
+    for name in list(ENGINE_MANIFEST.keys()):
+        stop_engine(name)
+
+def start_tier(tier):
+    engines = [n for n, m in ENGINE_MANIFEST.items() if m['tier'] == tier]
+    print(f'\n[TIER] Launching {tier} ({len(engines)} engines)')
+    for name in engines:
+        start_engine(name)
+    time.sleep(1)
+
+def start_all():
+    print('[MORPHEUS] === STAGED LAUNCH v2 ===')
+    for tier in TIER_ORDER:
+        start_tier(tier)
+    print('[MORPHEUS] === ALL TIERS DEPLOYED ===')
+
+def health_check(name):
+    meta = ENGINE_MANIFEST[name]
+    if meta['probe'] == 'morp2':
+        return probe_morp2(meta['port'])
+    elif meta['probe'] == 'udp':
+        return probe_udp(meta['port'])
+    else:
+        return probe_tcp(meta['port'])
+
+def monitor_loop():
+    print('[SUPERVISOR-v2] Health monitor active (Ctrl+C to stop)')
+    while running:
+        for name, meta in ENGINE_MANIFEST.items():
+            if not health_check(name):
+                print(f'[RECOVERY] {name} probe failed, restarting...')
+                stop_engine(name)
+                time.sleep(1)
+                if can_restart(name, 5, 60):
+                    start_engine(name)
+                else:
+                    print(f'[CRITICAL] {name} exceeded restart limit')
+        time.sleep(5)
+
+def status():
+    print(f"\n{'ENGINE':<20} {'TIER':<12} {'PORT':<8} {'PID':<8} {'STATUS':<8} {'MODE':<10}")
+    print("-" * 70)
+    for name, meta in ENGINE_MANIFEST.items():
+        port = meta['port']
+        pid_file = PID_DIR / f'{name}.pid'
+        pid_str = '-'
+        status = 'DOWN'
+        if pid_file.exists():
+            try:
+                pid = int(pid_file.read_text().strip())
+                if pid_alive(pid):
+                    alive = health_check(name)
+                    status = 'UP' if alive else 'ZOMBIE'
+                    pid_str = str(pid)
+                else:
+                    status = 'DEAD'
+            except:
+                status = 'ERROR'
+        mode = 'MORP-v2' if meta['probe'] == 'morp2' else meta['probe']
+        print(f'{name:<20} {meta["tier"]:<12} {port:<8} {pid_str:<8} {status:<8} {mode:<10}')
+
+if __name__ == '__main__':
+    cmd = sys.argv[1] if len(sys.argv) > 1 else 'status'
+    if cmd == 'status': status()
+    elif cmd == 'scan':
+        for name, meta in ENGINE_MANIFEST.items():
+            ok = health_check(name)
+            print(f'{name:<20} port {meta["port"]:<6} {"UP" if ok else "DOWN"}')
+    elif cmd == 'start': start_engine(sys.argv[2])
+    elif cmd == 'tier': start_tier(sys.argv[2])
+    elif cmd == 'all': start_all()
+    elif cmd == 'stop': stop_engine(sys.argv[2])
+    elif cmd == 'stopall': stop_all()
+    elif cmd == 'monitor': monitor_loop()
+    else:
+        print('Usage: supervisor_v2.py [status|scan|start NAME|tier TIER|all|stop NAME|stopall|monitor]')

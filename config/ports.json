@@ -1,0 +1,99 @@
+{
+  "registry": {
+    "pk_swarm": {
+      "port": 15001,
+      "proto": "tcp",
+      "tier": "core",
+      "critical": true
+    },
+    "pk_heartbeat": {
+      "port": 15002,
+      "proto": "tcp",
+      "tier": "core",
+      "critical": true
+    },
+    "gatekeeper": {
+      "port": 15003,
+      "proto": "tcp",
+      "tier": "core",
+      "critical": true
+    },
+    "supervisor": {
+      "port": 15004,
+      "proto": "tcp",
+      "tier": "core",
+      "critical": true
+    },
+    "bodyguard": {
+      "port": 15005,
+      "proto": "tcp",
+      "tier": "core",
+      "critical": true
+    },
+    "pk_zayden": {
+      "port": 15006,
+      "proto": "tcp",
+      "tier": "bridge",
+      "critical": false
+    },
+    "pk_gotem": {
+      "port": 15007,
+      "proto": "tcp",
+      "tier": "bridge",
+      "critical": false
+    },
+    "swarm_gossip": {
+      "port": 15008,
+      "proto": "udp",
+      "tier": "core",
+      "critical": true
+    },
+    "zayden_unified": {
+      "port": 15009,
+      "proto": "tcp",
+      "tier": "bridge",
+      "critical": false
+    },
+    "dna_binary": {
+      "port": 15010,
+      "proto": "tcp",
+      "tier": "utility",
+      "critical": false
+    },
+    "chaos_engine": {
+      "port": 15011,
+      "proto": "tcp",
+      "tier": "elmalo",
+      "critical": false
+    },
+    "kernel_bridge": {
+      "port": 15012,
+      "proto": "tcp",
+      "tier": "elmalo",
+      "critical": false
+    },
+    "arbitration": {
+      "port": 15013,
+      "proto": "tcp",
+      "tier": "elmalo",
+      "critical": false
+    },
+    "initiation": {
+      "port": 15014,
+      "proto": "tcp",
+      "tier": "elmalo",
+      "critical": false
+    },
+    "scs_main": {
+      "port": 15015,
+      "proto": "tcp",
+      "tier": "orchestrator",
+      "critical": true
+    }
+  },
+  "dynamic_range": {
+    "min": 20000,
+    "max": 25000
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,30 @@
+# Runtime state
+node_*
+proteus_*.dna
+proteus_child_*
+proteus_mesh.state
+*.dna
+*.state
+*.pid
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.d
+__pycache__/
+*.pyc
+*.pyo
+
+# Backups
+*.bak
+*.bak2
+*.tmp
+
+# Secrets
+node_secret.bin
+.env
+
+# Logs
+logs/
+*.log

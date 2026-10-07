@@ -3,7 +3,7 @@ CXXFLAGS = -std=c++17 -Wall -O2 -pthread -Iinclude -I/data/data/com.termux/files
 LDFLAGS = -L/data/data/com.termux/files/usr/lib -lcrypto
 BIN = bin
 
-TARGETS = $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip
+TARGETS = $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main
 
 all: $(BIN) $(TARGETS)
 
@@ -25,7 +25,10 @@ $(BIN)/initiation: src/initiation.cpp include/morp.hpp
 $(BIN)/swarm_gossip: src/swarm_gossip.cpp include/morp.hpp
 	$(CXX) $(CXXFLAGS) -o $@ src/swarm_gossip.cpp $(LDFLAGS)
 
+$(BIN)/scs_main: src/scs_main.cpp include/morp.hpp
+	$(CXX) $(CXXFLAGS) -o $@ src/scs_main.cpp $(LDFLAGS)
+
 clean:
-	rm -f $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip
+	rm -f $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main
 
 .PHONY: all clean

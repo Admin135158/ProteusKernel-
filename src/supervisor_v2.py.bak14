@@ -28,7 +28,7 @@ ENGINE_MANIFEST = {
     'kernel_bridge':  {'type': 'cpp', 'bin': 'bin/bridge',      'port': 15012, 'tier': 'elmalo', 'probe': 'tcp'},
     'arbitration':    {'type': 'cpp', 'bin': 'bin/arbitration',      'port': 15013, 'tier': 'elmalo', 'probe': 'tcp'},
     'initiation':     {'type': 'cpp', 'bin': 'bin/initiation',  'port': 15014, 'tier': 'elmalo', 'probe': 'tcp'},
-    'scs_main':       {'type': 'cpp', 'bin': 'bin/scs_main',       'port': 15015, 'tier': 'orchestrator', 'probe': 'tcp'},
+    'scs_main':       {'type': 'python', 'script': 'scs_main.py',       'port': 15015, 'tier': 'orchestrator', 'probe': 'tcp'},
 }
 
 TIER_ORDER = ['core', 'bridge', 'utility', 'elmalo', 'orchestrator']

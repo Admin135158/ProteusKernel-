@@ -40,3 +40,33 @@ inline std::vector<uint8_t> encode(uint8_t type, const std::vector<uint8_t>& pay
     return frame;
 }
 }
+
+// ---- Client helper ----
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+
+namespace morp {
+inline std::vector<uint8_t> request(int port, uint8_t type, const std::vector<uint8_t>& payload = {}) {
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock < 0) return {};
+    sockaddr_in addr{};
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(port);
+    addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    if (connect(sock, (sockaddr*)&addr, sizeof(addr)) < 0) { close(sock); return {}; }
+    auto frame = encode(type, payload);
+    send(sock, frame.data(), frame.size(), 0);
+    uint8_t buf[8192];
+    ssize_t n = recv(sock, buf, sizeof(buf), 0);
+    close(sock);
+    if (n <= 0) return {};
+    return std::vector<uint8_t>(buf, buf + n);
+}
+
+inline std::string payload_as_string(const std::vector<uint8_t>& frame) {
+    if (frame.size() <= FRAME_MIN) return "";
+    return std::string((const char*)frame.data() + FRAME_MIN, frame.size() - FRAME_MIN);
+}
+}

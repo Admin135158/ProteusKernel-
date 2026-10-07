@@ -31,3 +31,11 @@ class ElMalo:
             "archetype": random.choice(["warrior", "sage", "chaos", "order"])
         }
         return psi
+
+if __name__ == "__main__":
+    import json
+    engine = ElMalo()
+    while True:
+        state = engine.synthesize_state()
+        print(json.dumps(state), flush=True)
+        time.sleep(1)

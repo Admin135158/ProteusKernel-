@@ -3,12 +3,15 @@ CXXFLAGS = -std=c++17 -Wall -O2 -pthread -Iinclude -I/data/data/com.termux/files
 LDFLAGS = -L/data/data/com.termux/files/usr/lib -lcrypto
 BIN = bin
 
-TARGETS = $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main
+TARGETS = $(BIN)/gatekeeper $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main $(BIN)/dna_binary
 
 all: $(BIN) $(TARGETS)
 
 $(BIN):
 	mkdir -p $(BIN)
+
+$(BIN)/gatekeeper: src/gatekeeper.cpp include/morp.hpp
+	$(CXX) $(CXXFLAGS) -o $@ src/gatekeeper.cpp $(LDFLAGS)
 
 $(BIN)/arbitration: src/arbitration.cpp include/morp.hpp
 	$(CXX) $(CXXFLAGS) -o $@ src/arbitration.cpp $(LDFLAGS)
@@ -28,7 +31,10 @@ $(BIN)/swarm_gossip: src/swarm_gossip.cpp include/morp.hpp
 $(BIN)/scs_main: src/scs_main.cpp include/morp.hpp
 	$(CXX) $(CXXFLAGS) -o $@ src/scs_main.cpp $(LDFLAGS)
 
+$(BIN)/dna_binary: src/dna_binary.cpp include/morp.hpp
+	$(CXX) $(CXXFLAGS) -o $@ src/dna_binary.cpp $(LDFLAGS)
+
 clean:
-	rm -f $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main
+	rm -f $(BIN)/gatekeeper $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main $(BIN)/dna_binary
 
 .PHONY: all clean

@@ -1,13 +1,21 @@
 CXX ?= clang++
-OPENSSL_PREFIX := /usr/local/opt/openssl@4
+
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+  OPENSSL_PREFIX := $(shell brew --prefix openssl)
+else
+  OPENSSL_PREFIX := /data/data/com.termux/files/usr
+endif
+
 CXXFLAGS = -std=c++17 -Wall -O2 -pthread -Iinclude -I$(OPENSSL_PREFIX)/include
-LDFLAGS = -L$(OPENSSL_PREFIX)/lib -lcrypto
+LDFLAGS  = -L$(OPENSSL_PREFIX)/lib -lcrypto
+
 BIN = bin
 
 TARGETS = $(BIN)/pk_swarm $(BIN)/pk_heartbeat $(BIN)/gatekeeper \
-         $(BIN)/pk_gotem $(BIN)/pk_zayden \
-         $(BIN)/swarm_gossip $(BIN)/dna_binary $(BIN)/chaos \
-         $(BIN)/bridge $(BIN)/arbitration $(BIN)/initiation $(BIN)/scs_main
+          $(BIN)/pk_gotem $(BIN)/pk_zayden \
+          $(BIN)/swarm_gossip $(BIN)/dna_binary $(BIN)/chaos \
+          $(BIN)/bridge $(BIN)/arbitration $(BIN)/initiation $(BIN)/scs_main
 
 all: $(BIN) $(TARGETS)
 

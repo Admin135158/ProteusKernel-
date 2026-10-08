@@ -29,3 +29,8 @@ node_secret.bin
 logs/
 *.log
 bin/
+bodyguard
+dna_binary
+gatekeeper
+pk_push
+*.bak*

@@ -15,14 +15,8 @@ LOG_DIR.mkdir(parents=True, exist_ok=True)
 AUDIT.parent.mkdir(parents=True, exist_ok=True)
 
 ENGINE_MANIFEST = {
-    'pk_swarm':       {'type': 'cpp', 'bin': 'bin/pk_swarm',       'port': 15001, 'tier': 'core', 'probe': 'tcp'},
-    'pk_heartbeat':   {'type': 'cpp', 'bin': 'bin/pk_heartbeat',   'port': 15002, 'tier': 'core', 'probe': 'tcp'},
     'gatekeeper':     {'type': 'cpp', 'bin': 'bin/gatekeeper',     'port': 15003, 'tier': 'core', 'probe': 'tcp'},
-    'supervisor':     {'type': 'cpp', 'bin': 'bin/supervisor',     'port': 15004, 'tier': 'core', 'probe': 'tcp'},
-    'bodyguard':      {'type': 'cpp', 'bin': 'bin/bodyguard',      'port': 15005, 'tier': 'core', 'probe': 'tcp'},
     'swarm_gossip':   {'type': 'cpp', 'bin': 'bin/swarm_gossip',   'port': 15008, 'tier': 'core', 'probe': 'udp'},
-    'pk_zayden':      {'type': 'cpp', 'bin': 'bin/pk_zayden',      'port': 15006, 'tier': 'bridge', 'probe': 'tcp'},
-    'pk_gotem':       {'type': 'cpp', 'bin': 'bin/pk_gotem',       'port': 15007, 'tier': 'bridge', 'probe': 'tcp'},
     'dna_binary':     {'type': 'cpp', 'bin': 'bin/dna_binary',     'port': 15010, 'tier': 'utility', 'probe': 'tcp'},
     'chaos_engine':   {'type': 'cpp', 'bin': 'bin/chaos',         'port': 15011, 'tier': 'elmalo', 'probe': 'tcp'},
     'kernel_bridge':  {'type': 'cpp', 'bin': 'bin/bridge',      'port': 15012, 'tier': 'elmalo', 'probe': 'tcp'},

@@ -104,7 +104,11 @@ def probe_udp(port):
         return False
 
 def pid_alive(pid):
-    return os.path.exists(f'/proc/{pid}')
+    import os as _os; 
+    try:
+        _os.kill(pid, 0); return True
+    except (OSError, ProcessLookupError):
+        return False
 
 def can_restart(name, max_r, window):
     now = time.time()

@@ -1,6 +1,7 @@
 CXX ?= clang++
-CXXFLAGS = -std=c++17 -Wall -O2 -pthread -Iinclude -I/data/data/com.termux/files/usr/include
-LDFLAGS = -L/data/data/com.termux/files/usr/lib -lcrypto
+OPENSSL_PREFIX := /usr/local/opt/openssl@4
+CXXFLAGS = -std=c++17 -Wall -O2 -pthread -Iinclude -I$(OPENSSL_PREFIX)/include
+LDFLAGS = -L$(OPENSSL_PREFIX)/lib -lcrypto
 BIN = bin
 
 TARGETS = $(BIN)/gatekeeper $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main $(BIN)/dna_binary

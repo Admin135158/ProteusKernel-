@@ -21,6 +21,7 @@ ENGINE_MANIFEST = {
     'pk_swarm':       {'type': 'cpp', 'bin': 'bin/pk_swarm',       'port': 15001, 'tier': 'core', 'probe': 'tcp'},
     'pk_swarm':       {'type': 'cpp', 'bin': 'bin/pk_swarm',       'port': 15001, 'tier': 'core', 'probe': 'tcp'},
     'pk_heartbeat':   {'type': 'cpp', 'bin': 'bin/pk_heartbeat',   'port': 15002, 'tier': 'core', 'probe': 'tcp'},
+    'pk_gotem':       {'type': 'cpp', 'bin': 'bin/pk_gotem',       'port': 15007, 'tier': 'bridge', 'probe': 'tcp'},
     'gatekeeper':     {'type': 'cpp', 'bin': 'bin/gatekeeper',     'port': 15003, 'tier': 'core', 'probe': 'tcp'},
     'swarm_gossip':   {'type': 'cpp', 'bin': 'bin/swarm_gossip',   'port': 15008, 'tier': 'core', 'probe': 'udp'},
     'dna_binary':     {'type': 'cpp', 'bin': 'bin/dna_binary',     'port': 15010, 'tier': 'utility', 'probe': 'tcp'},

@@ -4,7 +4,7 @@ CXXFLAGS = -std=c++17 -Wall -O2 -pthread -Iinclude -I$(OPENSSL_PREFIX)/include
 LDFLAGS = -L$(OPENSSL_PREFIX)/lib -lcrypto
 BIN = bin
 
-TARGETS = $(BIN)/pk_swarm $(BIN)/pk_heartbeat $(BIN)/gatekeeper $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main $(BIN)/dna_binary
+TARGETS = $(BIN)/pk_gotem $(BIN)/pk_swarm $(BIN)/pk_heartbeat $(BIN)/gatekeeper $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main $(BIN)/dna_binary
 
 all: $(BIN) $(TARGETS)
 
@@ -36,7 +36,7 @@ $(BIN)/dna_binary: src/dna_binary.cpp include/morp.hpp
 	$(CXX) $(CXXFLAGS) -o $@ src/dna_binary.cpp $(LDFLAGS)
 
 clean:
-	rm -f $(BIN)/pk_swarm $(BIN)/pk_heartbeat $(BIN)/gatekeeper $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main $(BIN)/dna_binary
+	rm -f $(BIN)/pk_gotem $(BIN)/pk_swarm $(BIN)/pk_heartbeat $(BIN)/gatekeeper $(BIN)/arbitration $(BIN)/chaos $(BIN)/bridge $(BIN)/initiation $(BIN)/swarm_gossip $(BIN)/scs_main $(BIN)/dna_binary
 
 .PHONY: all clean
 $(BIN)/pk_heartbeat: src/pk_heartbeat.cpp include/morp.hpp
@@ -46,4 +46,7 @@ $(BIN)/pk_heartbeat: src/pk_heartbeat.cpp include/morp.hpp
 
 $(BIN)/pk_swarm: src/pk_swarm.cpp include/morp.hpp
 	$(CXX) $(CXXFLAGS) -o $@ src/pk_swarm.cpp $(LDFLAGS)
+
+$(BIN)/pk_gotem: src/pk_gotem.cpp include/morp.hpp
+	$(CXX) $(CXXFLAGS) -o $@ src/pk_gotem.cpp $(LDFLAGS)
 

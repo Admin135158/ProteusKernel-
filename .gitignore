@@ -34,3 +34,8 @@ dna_binary
 gatekeeper
 pk_push
 *.bak*
+bodyguard
+dna_binary
+gatekeeper
+pk_push
+*.bak*
